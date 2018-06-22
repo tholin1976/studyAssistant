@@ -1,0 +1,16 @@
+﻿@model StudySession
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>@Model.Title</h2>
+
+<h3>Er du sikker på at du vil slette denne aktiviteten?</h3>
+<div>
+    <form asp-controller="StudySession" asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button class="btn btn-primary" asp-action="Index"><i class="fa fa-times"></i> Avbryt</button>
+        <input type="submit" value="Slett" class="btn btn-danger" />
+    </form>
+</div>

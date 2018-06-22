@@ -1,0 +1,60 @@
+﻿@model StudyAssistant.Web.Core.Domain.Assignment
+
+@{
+    ViewData["Title"] = "Info";
+}
+
+<h2>Info</h2>
+
+<div>
+    <h4>Assignment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Deadline)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Deadline)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCreated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateCreated)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateCompleted)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateCompleted)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Grade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Grade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Course)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Course.Title)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary-outline" href="javascript:history.go(-1)"><i class="fa fa-arrow-left"></i> Tilbake</a>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.Id"><i class="fa fa-edit"></i> Endre</a>
+</div>

@@ -1,0 +1,51 @@
+﻿@{
+    Layout = "_LayoutHomeNew";
+}
+@model AccountLoginViewModel
+
+@if (TempData["Message"] != null)
+{
+    @Html.Raw(TempData["Message"])
+}
+<header class="masthead-login text-white">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-11 col-xl-9 mx-auto">
+                <form asp-controller="Account" asp-action="Login" method="post">
+                    @Html.AntiForgeryToken()
+                    <div class="row">
+                        <div class="col">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+                        </div>
+                    </div>
+                    <h2>Logg inn</h2>
+                    <div class="form-row">
+                        <div class="col-sm-12 col-md-4 col-lg-3">
+                            <label asp-for="UserName" class="col-form-label">Brukernavn</label>
+                            <input asp-for="UserName" class="form-control" autofocus>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-sm-12 col-md-4 col-lg-3">
+                            <label asp-for="Password" class="col-form-label">Passord</label>
+                            <input asp-for="Password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-row mt-3">
+                        <div class="col-sm-12 col-md-4 col-lg-3">
+                            <button class="btn btn-lg btn-outline-success" type="submit">Logg inn</button>
+                            <p class="mt-5 mb-3 text-muted"></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+@section scripts
+    {
+    @await Html.PartialAsync("_ValidationScriptsPartial");
+}

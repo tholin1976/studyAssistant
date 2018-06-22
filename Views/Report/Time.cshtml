@@ -1,0 +1,46 @@
+﻿@using StudyAssistant.Web.Utilities
+@model SelectCourseReportViewModel
+<h2>Tidsbruk</h2>
+
+@{if (ViewBag.courseTitle != null)
+        {
+<h5>@ViewBag.courseTitle :: @ViewBag.chartTitle</h5>
+        }
+            
+    }
+<hr/>
+
+<div class="row">
+    <div class="col form-group">
+        <form asp-action="Time" id="course" method="post" class="form-inline">
+            <select asp-for="courseId" class="form-control mr-2" id="courseId" name="courseId" asp-items="@ViewBag.Courses">
+                <option selected disabled>Fag</option>
+            </select>
+            <select class="form-control mr-2" id="chartType" name="chartType" asp-for="chartType" asp-items="@Html.GetEnumSelectList(typeof(ChartType))">
+                <option selected disabled>Diagramtype</option>
+            </select>
+            <button type="submit" class="btn btn-primary-outline"><i class="fa fa-check-square"></i> Vis</button>
+        </form>
+    </div>
+</div>
+<div class="PieChartCourseInfoDiv">
+    <canvas id="chart"></canvas>
+</div>
+    
+
+
+@{
+    ChartJSCore.Models.Chart chart = (ChartJSCore.Models.Chart)ViewBag.Chart;
+}
+
+@section Scripts {
+    <script src="~/lib/Chart.js/dist/Chart.js"></script>
+    <script>
+        @{
+            if (chart != null)
+            {
+                @Html.Raw(chart.CreateChartCode("chart"))
+            }
+        }
+    </script>
+}

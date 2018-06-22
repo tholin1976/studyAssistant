@@ -1,0 +1,165 @@
+﻿@model DashboardViewModel
+@if (TempData["Message"] != null)
+{
+    @Html.Raw(TempData["Message"])
+}
+<section class="section">
+
+    <div class="row">
+        <div class="col-xl-6">
+            <div class="card items" data-exclude="xs,sm,lg">
+                <div class="card-header bordered">
+                    <div class="header-block">
+                        <h3 class="title"><i class="fa fa-book m-1 pr-2"></i> Dagens studieøkter </h3>
+                        <a asp-controller="StudySession" asp-action="Create" class="btn btn-primary btn-sm"> Lag ny </a>
+                    </div>
+                    <div class="header-block pull-right">
+                        <label class="search">
+                            <input class="search-input" placeholder="søk...">
+                            <i class="fa fa-search search-icon"></i>
+                        </label>
+                    </div>
+                </div>
+
+                @if (Model.StudySessions.Any())
+                {
+                    <ul class="item-list striped">
+                        <li class="item item-list-header">
+                            <div class="item-row">
+                                <div class="item-col item-col-header item-col-title">
+                                    <div>
+                                        <span>Tittel / fag</span>
+                                    </div>
+                                </div>
+                                <div class="item-col item-col-header item-col-date">
+                                    <div>
+                                        <span>Tidspunkt </span>
+                                    </div>
+                                </div>
+                                <div class="item-col item-col-header item-col-date">
+                                    <div class="no-overflow">
+                                        <span>Varighet</span>
+                                    </div>
+                                </div>
+                                <div class="item-col item-col-header item-col-date">
+                                    <div>
+                                        <span>Gjennomfør</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        @foreach (StudySession session in Model.StudySessions)
+                        {
+                            <li class="item">
+                                <div class="item-row">
+                                    <div class="item-col item-col-title no-overflow">
+                                        <div>
+                                            <h4 class="item-title no-wrap">
+                                                <a asp-controller="StudySession" asp-action="Info" asp-route-id="@session.Id">@session.Title</a>
+                                                <a asp-controller="Course" asp-action="Info" asp-route-id="@session.CourseId">@session.Course.Title</a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="item-col item-col-date">
+                                        <div class="item-heading">Start</div>
+                                        <div> @session.StartTime </div>
+                                    </div>
+                                    <div class="item-col item-col-date">
+                                        <div class="item-heading">Varighet</div>
+                                        <div> @session.Duration </div>
+                                    </div>
+                                    <div class="item-col item-col-date no-overflow">
+                                        <div>
+                                            <h4 class="item-title no-wrap"> <a asp-controller="StudySession" asp-action="Finish" asp-route-id="@session.Id" class="btn btn-primary-outline btn-sm "><i class="fa fa-check-square"></i> Fullfør</a> </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        }
+
+                    </ul>
+
+
+                }
+                else
+                {
+                    <div class="card-block"><h6 class="item-title">Ingen planlagte studieøkter i dag..</h6></div>
+                }
+
+            </div>
+        </div>
+        <div class="col-xl-6">
+            <div class="card items" data-exclude="xs,sm,lg">
+                <div class="card-header bordered">
+                    <div class="header-block">
+                        <h3 class="title"><i class="fa fa-edit m-1 pr-2"></i> Kommende oppgaver </h3>
+                        <a asp-controller="Assignment" asp-action="Create" class="btn btn-primary btn-sm"> Lag ny </a>
+                    </div>
+                    <div class="header-block pull-right">
+                        <label class="search">
+                            <input class="search-input" placeholder="søk...">
+                            <i class="fa fa-search search-icon"></i>
+                        </label>
+                    </div>
+                </div>
+
+                @if (Model.Assignments.Any())
+                {
+                    <ul class="item-list striped">
+                        <li class="item item-list-header">
+                            <div class="item-row">
+                                <div class="item-col item-col-header item-col-title">
+                                    <div>
+                                        <span>Tittel / fag</span>
+                                    </div>
+                                </div>
+                                <div class="item-col item-col-header item-col-date">
+                                    <div>
+                                        <span>Frist</span>
+                                    </div>
+                                </div>
+                                <div class="item-col item-col-header item-col-date">
+                                    <div>
+                                        <span>Innlever</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        @foreach (Assignment assignment in Model.Assignments)
+                        {
+                            <li class="item">
+                                <div class="item-row">
+                                    <div class="item-col item-col-title no-overflow">
+                                        <div>
+                                            <h4 class="item-title no-wrap">
+                                                <a asp-controller="Assignment" asp-action="Info" asp-route-id="@assignment.Id">@assignment.Title</a>
+                                                <a asp-controller="Course" asp-action="Info" asp-route-id="@assignment.CourseId">@assignment.Course.Title</a>
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="item-col item-col-date">
+                                        <div class="item-heading">Frist</div>
+                                        <div> @assignment.Deadline.ToShortDateString() </div>
+                                    </div>
+                                    <div class="item-col item-col-date no-overflow">
+                                        <div>
+                                            <h4 class="item-title no-wrap"> <a asp-controller="Assignment" asp-action="Finish" asp-route-id="@assignment.Id" class="btn btn-primary-outline btn-sm "><i class="fa fa-check-square"></i> Fullfør</a> </h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+
+                }
+                else
+                {
+                    <div class="card-block"><h6 class="item-title">Ingen oppgaver de neste 7 dagene..</h6></div>
+                }
+            </div>
+        </div>
+    </div>
+
+
+</section>

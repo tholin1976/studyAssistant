@@ -1,0 +1,64 @@
+﻿@model Course
+@if (TempData["Message"] != null)
+{
+    @Html.Raw(TempData["Message"])
+}
+<section class="section">
+    <div class="row sameheight-container">
+        <div class="col-xl-8">
+            <div class="card sameheight-item">
+                <div class="card-block">
+                    <div class="card-title-block">
+                        <h3 class="title">@Model.Title</h3>
+                        <hr />
+                    </div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a href="" class="nav-link active" data-target="#desc-pills" aria-controls="desc-pills" data-toggle="tab" role="tab">Beskrivelse</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link" data-target="#timeperiod-pills" aria-controls="timeperiod-pills" data-toggle="tab" role="tab">Tidsperiode</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link" data-target="#results-pills" aria-controls="results-pills" data-toggle="tab" role="tab">Resultat / Fremgang</a>
+                        </li>
+                    </ul>
+                    <hr />
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="desc-pills">
+                            <h6>Om faget</h6>
+                            <p>@Model.Description</p>
+                        </div>
+                        <div class="tab-pane" id="timeperiod-pills">
+                            <h6>Fagperiode</h6>
+                            <p>@Model.DateFrom.ToShortDateString() - @Model.DateTo.ToShortDateString()</p>
+                        </div>
+                        <div class="tab-pane" id="results-pills">
+                            <h6>Karakter</h6>
+                            <p>@Enum.GetName(typeof(Grade), Model.Grade)</p>
+                            <h6>Fremgang</h6>
+                            <p>
+                                Du har jobbet <strong>
+                                    @if (ViewBag.CourseStudyTime != null)
+                                    {@ViewBag.CourseStudyTime} t
+                                     </strong> av totalt <strong>@Model.WorkLoad timer</strong>
+                                     </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.card-block -->
+                <div class="card-footer">
+                    <p>
+                    </p>
+                </div>
+            </div>
+            <!-- /.card -->
+        </div>
+    </div>
+    <a class="btn btn-primary-outline" href="javascript:history.go(-1)"><i class="fa fa-arrow-left"></i> Tilbake</a>
+    <a asp-controller="Course" asp-action="Edit" asp-route-Id="@Model.Id" class="btn btn-primary"><i class="fa fa-edit"></i> Endre</a>
+    <a asp-controller="Course" asp-action="Delete" asp-route-Id="@Model.Id" class="btn btn-danger"><i class="fa fa-trash"></i> Slett</a>
+
+</section>

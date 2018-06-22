@@ -1,0 +1,101 @@
+﻿@model PaginatedList<Course>
+@if (TempData["Message"] != null)
+{
+    @Html.Raw(TempData["Message"])
+}
+<h2>Dine fag</h2>
+<div class="container-fluid h-100">
+    <form asp-action="Index" method="get" id="searchFormCourse">
+        <div class="form-row">
+            <div class="form-group col-md-5 mb-2">
+                <label for="searchString" class="col-form-label">Søk på tittel:</label>
+                <input class="form-control" name="searchString" id="searchString" value="@ViewData["currentFilter"]" />
+            </div>
+
+            <div class="form-check-inline col-md-6 align-self-end mb-3">
+                <label class="form-check-label mr-2" for="onlyActiveCourses">Vis kun aktive fag</label>
+                <input class="form-check-input" onclick="updateList(this);" value="true" type="checkbox" name="onlyActiveCourses" id="onlyActiveCourses" @ViewData["onlyActiveCourses"] />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-5 align-text-bottom">
+                <a class="btn btn-warning-outline" asp-controller="Course" asp-action="Index"><i class="fa fa-refresh"></i> Nullstill</a> &vert;
+                <button type="submit" class="btn btn-primary-outline"><i class="fa fa-search"></i> Søk</button>
+            </div>
+        </div>
+    </form>
+    <div class="row h-100">
+        <div class="table-responsive-md">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th><a asp-action="Index" asp-route-sortOrder="@ViewData["sortTitleParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" asp-route-onlyActiveCourses="@ViewData["onlyActiveCoursesValue"]">Tittel</a> </th>
+                        <th><a asp-action="Index" asp-route-sortOrder="@ViewData["sortDateParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" asp-route-onlyActiveCourses="@ViewData["onlyActiveCoursesValue"]">Sluttdato</a></th>
+                        <th>Studiepoeng</th>
+                        <th colspan="3">Handlinger</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @{
+                    if (!Model.Any())
+                    {
+                        <tr>
+                            <td colspan="4">Fant ingen fag..</td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (Course c in Model)
+                        {
+                            <tr>
+                                <td>@c.Title</td>
+                                <td>@c.DateTo.ToShortDateString()</td>
+                                <td>@c.Credits</td>
+                                <td>
+                                    <a asp-controller="Course" asp-action="Info" asp-route-Id="@c.Id" class="btn btn-info btn-sm"><i class="fa fa-info"></i> Om</a>
+                                </td>
+                                <td>
+                                    <a asp-controller="Course" asp-action="Edit" asp-route-Id="@c.Id" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Endre</a>
+                                </td>
+                                <td>
+                                    <a asp-controller="Course" asp-action="Delete" asp-route-Id="@c.Id" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Slett</a>
+                                </td>
+                            </tr>
+                        }
+
+                    }
+
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        @{
+            var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+            var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+        }
+
+        <a asp-action="Index"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-page="@(Model.PageIndex - 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-primary @prevDisabled">
+            <i class="fa fa-arrow-left"></i> Forrige
+        </a>
+        <a asp-action="Index"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-page="@(Model.PageIndex + 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-primary @nextDisabled">
+            Neste <i class="fa fa-arrow-right"></i>
+        </a>
+
+    </div>
+</div>
+
+<script>
+    function updateList(e) {
+        document.getElementById('searchFormCourse').submit();
+    }
+</script>

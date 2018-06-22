@@ -1,0 +1,55 @@
+﻿@model Course
+
+@if (TempData["Message"] != null)
+{
+    @Html.Raw(TempData["Message"])
+}
+
+<h2>Opprett nytt fag</h2>
+<hr />
+<div class="container-fluid">
+    <form asp-action="Create" method="post">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group row">
+            <div class="col-10 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+                <label asp-for="Title" class="col-form-label">Fagtittel</label>
+                <input asp-for="Title" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-10 col-sm-9 col-md-8 col-lg-7 col-xl-6">
+                <label asp-for="Description" class="col-form-label">Beskrivelse</label>
+                <textarea asp-for="Description" rows="2" cols="40" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-8 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+                <label asp-for="DateFrom" class="col-form-label"></label>
+                <input asp-for="DateFrom" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-8 col-sm-6 col-md-5 col-lg-4 col-xl-3">
+                <label asp-for="DateTo" class="col-form-label"></label>
+                <input asp-for="DateTo" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-5 col-sm-4 col-md-3 col-lg-2 col-xl-1">
+                <label asp-for="Credits" class="col-form-label"></label>
+                <input asp-for="Credits" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col">
+                <a class="btn btn-danger" asp-action="Index"><i class="fa fa-times"></i> Avbryt</a>
+                <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Lagre</button>
+            </div>
+        </div>
+    </form>
+
+</div>
+@section scripts
+    {
+    @await Html.PartialAsync("_ValidationScriptsPartial");
+}

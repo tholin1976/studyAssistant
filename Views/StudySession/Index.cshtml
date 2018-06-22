@@ -1,0 +1,114 @@
+﻿@model PaginatedList<StudySession>
+@if (TempData["Message"] != null)
+{
+    @Html.Raw(TempData["Message"])
+}
+<h2>Dine studieøkter</h2>
+<div class="container-fluid h-100">
+    <form asp-action="Index" method="get" id="searchFormStudySession">
+        <div class="form-row">
+            <div class="form-group col-md-5 mb-2">
+                <label for="searchString" class="col-form-label">Søk på tittel:</label>
+                <input class="form-control" name="searchString" id="searchString" value="@ViewData["currentFilter"]" />
+            </div>
+
+            <div class="form-check-inline col-md-6 align-self-end mb-3">
+                <label class="form-check-label mr-2" for="onlyActiveStudySessions">Vis kun aktive studieøkter</label>
+                <input class="form-check-input" onclick="updateList(this);" value="true" type="checkbox" name="onlyActiveStudySessions" id="onlyActiveStudySessions" @ViewData["onlyActiveStudySessions"] />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-5 align-text-bottom">
+                <a class="btn btn-warning-outline" asp-controller="Course" asp-action="Index"><i class="fa fa-refresh"></i> Nullstill</a> &vert;
+                <button type="submit" class="btn btn-primary-outline"><i class="fa fa-search"></i> Søk</button>
+            </div>
+        </div>
+    </form>
+    <div class="row h-100">
+        <div class="table-responsive-md">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th><a asp-action="Index" asp-route-sortOrder="@ViewData["sortTitleParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" asp-route-onlyActiveStudySessions="@ViewData["onlyActiveStudySessionsValue"]">Studieøkt</a></th>
+                    <th><a asp-action="Index" asp-route-sortOrder="@ViewData["sortCourseParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" asp-route-onlyActiveStudySessions="@ViewData["onlyActiveStudySessionsValue"]">Fag</a></th>
+                    <th>Arbeidsform</th>
+                    <th><a asp-action="Index" asp-route-sortOrder="@ViewData["sortDateParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]" asp-route-onlyActiveStudySessions="@ViewData["onlyActiveStudySessionsValue"]">Start</a></th>
+                    <th>Varighet</th>
+                    <th colspan="4">Handlinger</th>
+                </tr>
+                </thead>
+                <tbody>
+                @{
+                    if (Model.Any())
+                    {
+                        foreach (var sa in Model)
+                        {
+                            <tr>
+                                <td>@sa.Title</td>
+                                <td>@sa.Course.Title</td>
+                                <td>@sa.StudySessionType.Title</td>
+                                <td>@sa.GetStudySessionStart().ToString("dd.MM | hh:mm")</td>
+                                <td>@Html.DisplayFor(modelItem => sa.Duration)</td>
+                                <td>
+                                    <a asp-controller="StudySession" asp-action="Info" asp-route-id="@sa.Id" class="btn btn-info btn-sm"><i class="fa fa-info"></i> Om</a>
+                                </td>
+                                <td>
+                                    <a asp-controller="StudySession" asp-action="Edit" asp-route-id="@sa.Id" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i> Endre</a>
+                                </td>    
+                                <td>
+                                    <a asp-controller="StudySession" asp-action="Delete" asp-route-id="@sa.Id" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Slett</a>
+                                </td>    
+                                <td>
+                                    @{
+                                        if (sa.IsCompleted == false)
+                                        {
+                                            <a asp-controller="StudySession" asp-action="Finish" asp-route-id="@sa.Id" class="btn btn-primary-outline btn-sm"><i class="fa fa-check-circle"></i> Gjennomfør</a>
+                                        }
+                                    }
+                                </td>
+                            </tr>
+
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5">Finner ingen studieøkter..</td>
+                        </tr>
+                    }
+                }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row">
+        @{
+            var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+            var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+        }
+
+        <a asp-action="Index"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-page="@(Model.PageIndex - 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-primary @prevDisabled">
+            <i class="fa fa-arrow-left"></i> Forrige
+        </a>
+        <a asp-action="Index"
+           asp-route-sortOrder="@ViewData["CurrentSort"]"
+           asp-route-page="@(Model.PageIndex + 1)"
+           asp-route-currentFilter="@ViewData["CurrentFilter"]"
+           class="btn btn-primary @nextDisabled">
+            Neste <i class="fa fa-arrow-right"></i>
+        </a>
+
+    </div>
+</div>
+
+<script>
+    function updateList(e) {
+        document.getElementById('searchFormStudySession').submit();
+    }
+</script>
+

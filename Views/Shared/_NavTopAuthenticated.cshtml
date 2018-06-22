@@ -1,0 +1,18 @@
+﻿@{
+    if (!User.Identity.IsAuthenticated)
+    {
+        <a class="btn btn-primary" asp-controller="Account" asp-action="Login"><i class="fa fa-sign-in-alt"></i> Logg inn</a>
+    }
+    else
+    {
+        <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" id="logoutForm">
+            <ul class="nav navbar-nav">
+                <li>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-sign-out-alt"></i> Logg ut</button>
+                </li>
+            </ul>
+        </form>
+    }
+}
+
+

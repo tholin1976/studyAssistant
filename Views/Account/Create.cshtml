@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "_LayoutHomeNew";
+}
+@model AccountCreateViewModel
+
+@if (TempData["Message"] != null)
+{
+    @Html.Raw(TempData["Message"])
+}
+<!-- Masthead -->
+<header class="masthead-createaccount text-white">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-11 col-xl-9 mx-auto">
+                <form asp-controller="Account" asp-action="Create" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="returnUrl" value="@ViewBag.returnUrl" />
+        
+                    <div class="form-row">
+                        <div class="col">
+                            <div asp-validation-summary="All" class="text-warning"></div>
+                        </div>
+                    </div>
+                    <h2>Ny konto</h2>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label asp-for="UserName" class="col-form-label">Brukernavn</label>
+                            <input asp-for="UserName" class="form-control" />
+                        </div>
+                        <div class="form-group col">
+                            <label asp-for="Password" class="col-form-label">Passord</label>
+                            <input asp-for="Password" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col">
+                            <label asp-for="Email" class="col-form-label">E-postadresse</label>
+                            <input asp-for="Email" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-outline-success btn-lg"><i class="fa fa-save"></i> Lagre</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+@section scripts
+    {
+    @await Html.PartialAsync("_ValidationScriptsPartial");
+}

@@ -1,0 +1,58 @@
+﻿@model Course
+
+<h2>Slett fag</h2>
+<h3>Er du sikker på at du vil slette dette faget?</h3>
+<p class="lead">
+    Alle tilhørende oppgaver og studieøkter vil også bli slettet, og lar seg ikke gjenopprette i etterkant.
+</p>
+<hr />
+<div class="card card-danger">
+    <div class="card-header">
+        <div class="header-block">
+            <p class="title text-light">
+                <i class="fa fa-trash fa-2x mr-2"></i>
+            </p>
+        </div>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">@Model.Title</h5>
+        <h6 class="card-subtitle">Aktivt i perioden @Model.DateFrom til @Model.DateTo</h6>
+        <hr />
+        <p class="card-text">
+            <strong>Om faget</strong><br />
+            @Model.Description
+        </p>
+    </div>
+    <div class="card-footer"></div>
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <a class="btn btn-primary" href="javascript:history.go(-1)"><i class="fa fa-times"></i> Avbryt</a>
+    <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i> Slett</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

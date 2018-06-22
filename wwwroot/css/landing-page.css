@@ -1,0 +1,159 @@
+body {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+header.masthead {
+    background: url("../img/bg-masthead.png") no-repeat center center;
+}
+
+header.masthead-createaccount {
+    background: url("../img/bg-book-bindings-business-coffee.png") no-repeat center center;    
+}
+
+header.masthead-login {
+    background: url("../img/bg-alphabet-blur-books.png") no-repeat center center;
+}
+header.masthead, header.masthead-login, header.masthead-createaccount {
+  position: relative;
+  background-color: #3a4651;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead .overlay, header.masthead-createaccount .overlay, header.masthead-login .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+header.masthead h1, header.masthead-createaccount h1, header.masthead-login h1 {
+  font-size: 2rem;
+}
+
+header.masthead label, header.masthead-createaccount label, header.masthead-login label {
+    font-size: 1rem;
+}
+@media (min-width: 768px) {
+  header.masthead, header.masthead-createaccount, header.masthead-login {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+  header.masthead h1, header.masthead-createaccount h1, header.masthead-login h1 {
+    font-size: 3rem;
+  }
+
+  header.masthead label, header.masthead-createaccount label, header.masthead-login label {
+      font-size: 1.5rem;
+  }
+
+  #logo {
+      width: 75%;
+  }
+}
+
+#logo {
+    width: 50%
+}
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 4.5rem;
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+  font-size: 5rem;
+}
+
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.bg-dark {
+    background-color: #3A4651;
+}
+
+.features-icons-icon .text-primary {
+    color: #52BCD3 !important;
+}
+
+.bg-footer {
+    background: #F0F3F6;
+}
+
+.footer i, .list-inline-item a, .footer li {
+    color: #52BCD3;
+    text-decoration: none;
+}
+
+.footer i:hover, .list-inline-item a:hover {
+    color: #398393;
+    transition: color .30s ease-in-out, background-color .30s ease-in-out, border-color .30s ease-in-out, box-shadow .30s ease-in-out;
+}
+
+/* Change the white to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #F8F9FA inset;
+    color: #3A4651;
+}
+
+.masthead button:hover {
+    transition: color .30s ease-in-out, background-color .30s ease-in-out, border-color .30s ease-in-out, box-shadow .30s ease-in-out;
+    background-color: #28A745;
+    color: #F8F9FA;
+}
+
+.masthead button {
+    background-color: #343A40;
+    color: #28A745;
+    border: 1px solid #28A745;
+}
+
+p, h3, input {
+    color: #3A4651;
+}
+

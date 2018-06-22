@@ -1,0 +1,96 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <StartupObject></StartupObject>
+    <OutputType>Exe</OutputType>
+    <UserSecretsId>46ef0ab9-b013-4e49-9e20-0c1259e08e15</UserSecretsId>
+    <NeutralLanguage></NeutralLanguage>
+    <ApplicationIcon />
+    <Win32Resource />
+    <AssemblyVersion>0.1.0.0</AssemblyVersion>
+    <FileVersion>0.1.0.0</FileVersion>
+    <Version>0.1</Version>
+    <Product>Study Assistant</Product>
+    <PackageId>StudyAssistant</PackageId>
+    <Authors>Thomas Johan Lines</Authors>
+    <Company />
+    <AssemblyName>StudyAssistant</AssemblyName>
+  </PropertyGroup>
+
+    <ItemGroup>
+    <Compile Remove="Views\Dashboard\css\**" />
+    <Compile Remove="wwwroot\assets\**" />
+    <Content Remove="Views\Dashboard\css\**" />
+    <Content Remove="wwwroot\assets\**" />
+    <EmbeddedResource Remove="Views\Dashboard\css\**" />
+    <EmbeddedResource Remove="wwwroot\assets\**" />
+    <None Remove="Views\Dashboard\css\**" />
+    <None Remove="wwwroot\assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20180513191505_Initial.cs" />
+    <Compile Remove="Migrations\20180513191505_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20180513191618_Initial.cs" />
+    <Compile Remove="Migrations\20180513191618_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20180513192035_Initial.cs" />
+    <Compile Remove="Migrations\20180513192035_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20180513192439_Initial.cs" />
+    <Compile Remove="Migrations\20180513192439_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20180513192611_Initial.cs" />
+    <Compile Remove="Migrations\20180513192611_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20180513194027_Initial.cs" />
+    <Compile Remove="Migrations\20180513194027_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20180513220347_New.cs" />
+    <Compile Remove="Migrations\20180513220347_New.Designer.cs" />
+    <Compile Remove="Migrations\20180513220553_New.cs" />
+    <Compile Remove="Migrations\20180513220553_New.Designer.cs" />
+    <Compile Remove="Migrations\20180513220711_New.cs" />
+    <Compile Remove="Migrations\20180513220711_New.Designer.cs" />
+    <Compile Remove="Migrations\20180513220804_New.cs" />
+    <Compile Remove="Migrations\20180513220804_New.Designer.cs" />
+    <Compile Remove="Migrations\20180513220949_New.cs" />
+    <Compile Remove="Migrations\20180513220949_New.Designer.cs" />
+    <Compile Remove="Migrations\20180513223316_Initial.cs" />
+    <Compile Remove="Migrations\20180513223316_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20180514111359_DisplayFormatStudyActivity.cs" />
+    <Compile Remove="Migrations\20180514111359_DisplayFormatStudyActivity.Designer.cs" />
+    <Compile Remove="Migrations\20180530121729_ChangedDataAnnotationsCourseDateFromDateTo.cs" />
+    <Compile Remove="Migrations\20180530121729_ChangedDataAnnotationsCourseDateFromDateTo.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="web.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Connected Services\Key Vault\ConnectedService.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ChartJSCore" Version="1.2.4" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.AzureKeyVault.HostingStartup" Version="2.0.2-preview2-final" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
+  </ItemGroup>
+
+
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\lib\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,54 @@
+﻿<div class="nav-side-menu">
+
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+    <div class="menu-list">
+
+        <ul id="menu-content" class="menu-content collapse out">
+            <li>
+                <a asp-controller="Dashboard" asp-action="Index">
+                    <i class="fas fa-tachometer-alt fa-2x"></i> Kontrollpanel
+                </a>
+            </li>
+            <li data-toggle="collapse" data-target="#course" class="collapsed">
+                <a href="#"><i class="fas fa-university fa-2x"></i> Fag <span class="arrow"></span></a>
+                <ul class="sub-menu collapse" id="course">
+                    <li><a asp-controller="Course" asp-action="Index">Aktive fag</a></li>
+                    <li><a asp-controller="Course" asp-action="Create">Nytt fag</a></li>
+                </ul>
+            </li>
+            <li data-toggle="collapse" data-target="#assignment" class="collapsed">
+                <a href="#"><i class="fas fa-tasks fa-2x"></i> Oppgave <span class="arrow"></span></a>
+                <ul class="sub-menu collapse" id="assignment">
+                    <li><a asp-controller="Assignment" asp-action="Index">Aktive oppgaver</a></li>
+                    <li><a asp-controller="Assignment" asp-action="Create">Ny oppgave</a></li>
+                </ul>
+            </li>
+
+            <li data-toggle="collapse" data-target="#studysession" class="collapsed">
+                <a href="#"><i class="fas fa-book fa-2x"></i> Arbeidsøkt <span class="arrow"></span></a>
+                <ul class="sub-menu collapse" id="studysession">
+                    <li><a asp-controller="StudySession" asp-action="Index">Planlagte økter</a></li>
+                    <li><a asp-controller="StudySession" asp-action="Create">Ny økt</a></li>
+                </ul>
+            </li>
+
+            <li data-toggle="collapse" data-target="#calendarmenu" class="collapsed">
+                <a href="#"><i class="fas fa-calendar-alt fa-2x"></i> Kalender <span class="arrow"></span></a>
+                <ul class="sub-menu collapse" id="calendarmenu">
+                    <li><a asp-controller="Calendar" asp-action="Index">Denne uken</a></li>
+                </ul>
+            </li>
+            <li>
+                <a asp-controller="Account" asp-action="Index">
+                    <i class="fas fa-user fa-2x"></i> Profil
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Account" asp-action="Settings">
+                    <i class="fas fa-cogs fa-2x"></i> Innstillinger
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

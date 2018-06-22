@@ -1,0 +1,77 @@
+﻿@await  Html.PartialAsync("_BrandingLeft")
+<nav class="menu">
+    <ul class="sidebar-menu metismenu" id="sidebar-menu">
+        <li>
+            <a asp-controller="Dashboard" asp-action="Index">
+                <i class="fa fa-home"></i> Kontrollpanel
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="fa fa-university"></i> Fag
+                <i class="fa arrow"></i>
+            </a>
+            <ul class="sidebar-nav">
+                <li>
+                    <a asp-controller="Course" asp-action="Index"> Fagliste </a>
+                </li>
+                <li>
+                    <a asp-controller="Course" asp-action="Create"> Nytt fag </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">
+                <i class="fa fa-pencil"></i> Oppgaver
+                <i class="fa arrow"></i>
+            </a>
+            <ul class="sidebar-nav">
+                <li>
+                    <a asp-controller="Assignment" asp-action="Index"> Oppgaveliste </a>
+                </li>
+                <li>
+                    <a asp-controller="Assignment" asp-action="Create"> Ny oppgave </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">
+                <i class="fa fa-book"></i> Studieøkter
+                <i class="fa arrow"></i>
+            </a>
+            <ul class="sidebar-nav">
+                <li>
+                    <a asp-controller="StudySession" asp-action="Index"> Studieøktliste </a>
+                </li>
+                <li>
+                    <a asp-controller="StudySession" asp-action="Create"> Ny studieøkt </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">
+                <i class="fa fa-calendar"></i> Kalender
+                <i class="fa arrow"></i>
+            </a>
+            <ul class="sidebar-nav">
+                <li>
+                    <a asp-controller="Calendar" asp-action="Index"> Måned </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="">
+                <i class="fa fa-bar-chart"></i> Rapporter
+                <i class="fa arrow"></i>
+            </a>
+            <ul class="sidebar-nav">
+                <li>
+                    <a asp-controller="Report" asp-action="Time"> Tidsbruk </a>
+                </li>
+                <li>
+                    <a asp-controller="Report" asp-action="Results"> Resultater </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>

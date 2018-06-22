@@ -1,0 +1,64 @@
+﻿@model Course
+@if (TempData["Message"] != null)
+{
+    @Html.Raw(TempData["Message"])
+}
+<h2>Endre fag</h2>
+<form asp-action="Edit" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="row">
+        <div class="form-group col-sm-9 col-md-8 col-lg-7 col-xl-6">
+            <label asp-for="Title" class="col-form-label">Fagtittel</label>
+            <input asp-for="Title" class="form-control" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-sm-9 col-md-8 col-lg-7 col-xl-6">
+            <label asp-for="Description" class="col-form-label">Beskrivelse</label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-sm-6 col-md-5 col-lg-4 col-xl-3">
+            <label asp-for="DateFrom" class="col-form-label"></label>
+            <input asp-for="DateFrom" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-sm-6 col-md-5 col-lg-4 col-xl-3">
+            <label asp-for="DateTo" class="col-form-label"></label>
+            <input asp-for="DateTo" class="form-control" />
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-sm-2">
+            <label asp-for="Credits" class="col-form-label"></label>
+            <input asp-for="Credits" class="form-control" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col-6 col-sm-3 col-md-2 col-lg-1">
+            <label asp-for="Grade" class="col-form-label"></label>
+            <select asp-for="Grade" asp-items="@Html.GetEnumSelectList(typeof(Grade))"></select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="form-group col">
+            <a class="btn btn-danger-outline" href="javascript:history.go(-1)"><i class="fa fa-times"></i> Avbryt</a>
+            <button type="submit" class="btn btn-primary">Lagre</button>
+        </div>
+    </div>
+
+</form>
+
+@section scripts
+    {
+    @await Html.PartialAsync("_ValidationScriptsPartial");
+}
