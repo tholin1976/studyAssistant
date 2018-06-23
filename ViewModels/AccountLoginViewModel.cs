@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace StudyAssistant.Web.ViewModels
+namespace studyAssistant.ViewModels
 {
     public class AccountLoginViewModel
     {

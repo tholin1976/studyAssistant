@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
-using ChartJSCore.Models;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using StudyAssistant.Web.Core.Domain;
-using StudyAssistant.Web.Data;
-using StudyAssistant.Web.Models;
-using StudyAssistant.Web.Utilities;
+using studyAssistant.Core.Domain;
+using studyAssistant.Data;
+using studyAssistant.Models;
+using studyAssistant.Utilities;
 
-namespace StudyAssistant.Web.Controllers
+namespace studyAssistant.Controllers
 {
     [Authorize]
     public class ReportController : Controller

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace StudyAssistant.Web.Models
-{
+namespace studyAssistant.Models {
+
     public class StudySessionDuration
     {
         public DateTime StartDate {get; set;}

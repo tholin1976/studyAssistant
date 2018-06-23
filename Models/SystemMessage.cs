@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.Reflection;
 using System.Xml.Linq;
 
-namespace StudyAssistant.Web.Models
+namespace studyAssistant.Models
 {
     public enum MessageType : byte
     {

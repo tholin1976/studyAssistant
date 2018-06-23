@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
 using Microsoft.EntityFrameworkCore.ValueGeneration;
-using StudyAssistant.Web.Core.Domain;
-using StudyAssistant.Web.Data;
+using studyAssistant.Core.Domain;
+using studyAssistant.Data;
 using System;
 
-namespace StudyAssistant.Web.Migrations
+namespace studyAssistant.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20180616152206_ChangedStudySessionAssignmentDeleteBehavior")]

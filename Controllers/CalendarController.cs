@@ -6,10 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using StudyAssistant.Web.Data;
-using StudyAssistant.Web.Core.Domain;
+using studyAssistant.Data;
+using studyAssistant.Core.Domain;
+using studyAssistant.Models;
 
-namespace StudyAssistant.Web.Controllers
+namespace studyAssistant.Web.Controllers
 {
     [Authorize]
     public class CalendarController : Controller

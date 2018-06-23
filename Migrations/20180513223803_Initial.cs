@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace StudyAssistant.Web.Migrations
+namespace studyAssistant.Web.Migrations
 {
     public partial class Initial : Migration
     {

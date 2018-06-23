@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace StudyAssistant.Web.Core.Domain
+namespace studyAssistant.Models
 {
     public class PaginatedList<T> : List<T>
     {

@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using StudyAssistant.Web.Core.Domain;
-using StudyAssistant.Web.Data;
-using StudyAssistant.Web.Models;
-using StudyAssistant.Web.ViewModels;
+using studyAssistant.Core.Domain;
+using studyAssistant.Data;
+using studyAssistant.Models;
 
-namespace StudyAssistant.Web.Controllers
+
+namespace studyAssistant.Controllers
 {
     
     [Authorize]

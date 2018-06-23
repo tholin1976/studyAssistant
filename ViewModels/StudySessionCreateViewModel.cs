@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using StudyAssistant.Web.Core.Domain;
+using studyAssistant.Core.Domain;
 
-namespace StudyAssistant.Web.ViewModels
+namespace studyAssistant.ViewModels
 {
     public class StudySessionCreateViewModel
     {

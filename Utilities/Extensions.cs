@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 
-namespace StudyAssistant.Web.Utilities
+namespace studyAssistant.Utilities
 {
     public static class Extensions
     {

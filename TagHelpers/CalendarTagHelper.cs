@@ -6,9 +6,10 @@ using System.Reflection;
 using System.Xml.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Razor.TagHelpers;
-using StudyAssistant.Web.Core.Domain;
+using studyAssistant.Core.Domain;
+using studyAssistant.Models;
 
-namespace StudyAssistant.Web.TagHelpers
+namespace studyAssistant.TagHelpers
 {
 
     public static class DateTimeExtensions

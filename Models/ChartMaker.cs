@@ -5,10 +5,10 @@ using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Threading.Tasks;
 using ChartJSCore.Models;
-using StudyAssistant.Web.Core.Domain;
-using StudyAssistant.Web.Data;
+using studyAssistant.Core.Domain;
+using studyAssistant.Data;
 
-namespace StudyAssistant.Web.Models
+namespace studyAssistant.Models
 {
     public enum ChartType
     {

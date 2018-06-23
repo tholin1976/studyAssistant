@@ -1,9 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace StudyAssistant.Web.Core.Domain
+namespace studyAssistant.Core.Domain
 {
     public class User : IdentityUser<int>
     {

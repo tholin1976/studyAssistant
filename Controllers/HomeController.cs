@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace StudyAssistant.Web.Controllers
+namespace studyAssistant.Controllers
 {
     [AllowAnonymous]
     public class HomeController : Controller

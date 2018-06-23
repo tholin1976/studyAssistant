@@ -2,12 +2,12 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using StudyAssistant.Web.Core.Domain;
-using StudyAssistant.Web.Data;
-using StudyAssistant.Web.Models;
-using StudyAssistant.Web.ViewModels;
+using studyAssistant.Core.Domain;
+using studyAssistant.Data;
+using studyAssistant.Models;
+using studyAssistant.ViewModels;
 
-namespace StudyAssistant.Web.Controllers
+namespace studyAssistant.Controllers
 {
 	[Authorize]
 	public class AccountController : Controller

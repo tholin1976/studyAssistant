@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using StudyAssistant.Web.Models;
+using studyAssistant.Models;
 
-namespace StudyAssistant.Web.ViewModels
+namespace studyAssistant.ViewModels
 {
     public class SelectCourseReportViewModel
     {

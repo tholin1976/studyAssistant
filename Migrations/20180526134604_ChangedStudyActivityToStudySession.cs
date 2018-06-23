@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 using System.Collections.Generic;
 
-namespace StudyAssistant.Web.Migrations
+namespace studyAssistant.Web.Migrations
 {
     public partial class ChangedStudyActivityToStudySession : Migration
     {

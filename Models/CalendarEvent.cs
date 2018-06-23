@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StudyAssistant.Web.Core.Domain
+namespace studyAssistant.Models
 {
     public class CalendarEvent  
     {

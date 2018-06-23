@@ -5,13 +5,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using StudyAssistant.Web.Core.Domain;
-using StudyAssistant.Web.Data;
+using studyAssistant.Core.Domain;
+using studyAssistant.Data;
 using System.Linq;
 using ChartJSCore.Models;
-using StudyAssistant.Web.Models;
+using studyAssistant.Models;
 
-namespace StudyAssistant.Web.Controllers
+namespace studyAssistant.Web.Controllers
 {
 
     [Authorize]

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace StudyAssistant.Web.Core.Domain
+namespace studyAssistant.Core.Domain
 {
     public class Role : IdentityRole<int>
     {

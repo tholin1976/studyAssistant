@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using StudyAssistant.Web.Core.Domain;
+using studyAssistant.Core.Domain;
 
-namespace StudyAssistant.Web.ViewModels
+namespace studyAssistant.ViewModels
 {
     public class CourseCreateViewModel
     {

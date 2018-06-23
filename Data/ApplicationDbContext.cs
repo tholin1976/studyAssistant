@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using StudyAssistant.Web.Core.Domain;
-using StudyAssistant.Web.Models;
+using studyAssistant.Core.Domain;
+using studyAssistant.Models;
 
-namespace StudyAssistant.Web.Data
+namespace studyAssistant.Data
 {
     public class ApplicationDbContext : IdentityDbContext<User, Role, int>
     {

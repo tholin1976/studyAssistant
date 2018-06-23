@@ -12,10 +12,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using StudyAssistant.Web.Data;
-using StudyAssistant.Web.Core.Domain;
+using studyAssistant.Data;
+using studyAssistant.Core.Domain;
 
-namespace StudyAssistant.Web
+namespace studyAssistant
 {
     public class Startup
     {
