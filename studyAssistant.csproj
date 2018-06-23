@@ -4,7 +4,6 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <StartupObject></StartupObject>
     <OutputType>Exe</OutputType>
-    <UserSecretsId>46ef0ab9-b013-4e49-9e20-0c1259e08e15</UserSecretsId>
     <NeutralLanguage></NeutralLanguage>
     <ApplicationIcon />
     <Win32Resource />
@@ -16,15 +15,20 @@
     <Authors>Thomas Johan Lines</Authors>
     <Company />
     <AssemblyName>studyAssistant</AssemblyName>
+    <UserSecretsId>c9946764-9173-4b81-9696-0620dd238dc3</UserSecretsId>
   </PropertyGroup>
 
     <ItemGroup>
+    <Compile Remove="Connected Services\Key Vault\**" />
     <Compile Remove="Views\Dashboard\css\**" />
     <Compile Remove="wwwroot\assets\**" />
+    <Content Remove="Connected Services\Key Vault\**" />
     <Content Remove="Views\Dashboard\css\**" />
     <Content Remove="wwwroot\assets\**" />
+    <EmbeddedResource Remove="Connected Services\Key Vault\**" />
     <EmbeddedResource Remove="Views\Dashboard\css\**" />
     <EmbeddedResource Remove="wwwroot\assets\**" />
+    <None Remove="Connected Services\Key Vault\**" />
     <None Remove="Views\Dashboard\css\**" />
     <None Remove="wwwroot\assets\**" />
   </ItemGroup>
@@ -65,13 +69,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="Connected Services\Key Vault\ConnectedService.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="ChartJSCore" Version="1.2.4" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
-    <PackageReference Include="Microsoft.AspNetCore.AzureKeyVault.HostingStartup" Version="2.0.2-preview2-final" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
   </ItemGroup>
 
@@ -82,6 +81,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Connected Services\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
 

@@ -38,7 +38,7 @@ namespace studyAssistant
             {
                 options.DefaultRequestCulture = new RequestCulture("nb-NO");
                 options.DefaultRequestCulture.Culture.DateTimeFormat.TimeSeparator = ":";
-                options.SupportedCultures = new List<CultureInfo> { new CultureInfo("en-US"), new CultureInfo("en-GB") };
+                options.SupportedCultures = new List<CultureInfo> { new CultureInfo("en-US"), new CultureInfo("en-GB"), new CultureInfo("en") };
             });
    
             services.AddMvc()

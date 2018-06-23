@@ -96,7 +96,7 @@ namespace studyAssistant.Controllers
             {
                 ViewBag.Courses = await _context.PopulateCourseData(currentUser.Id);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 msg = new SystemMessage(MessageType.Warning,
                     "Fikk ikke hentet faginformasjonen. Vennligst prøv igjen senere.");
