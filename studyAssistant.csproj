@@ -2,20 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <StartupObject></StartupObject>
-    <OutputType>Exe</OutputType>
-    <NeutralLanguage></NeutralLanguage>
-    <ApplicationIcon />
-    <Win32Resource />
+	<OutputType>Exe</OutputType>
     <AssemblyVersion>0.1.0.0</AssemblyVersion>
     <FileVersion>0.1.0.0</FileVersion>
     <Version>0.1</Version>
     <Product>studyAssistant</Product>
     <PackageId>studyAssistant</PackageId>
     <Authors>Thomas Johan Lines</Authors>
-    <Company />
     <AssemblyName>studyAssistant</AssemblyName>
-    <UserSecretsId>c9946764-9173-4b81-9696-0620dd238dc3</UserSecretsId>
+    <MvcRazorCompileOnPublish>true</MvcRazorCompileOnPublish>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
   </PropertyGroup>
 
     <ItemGroup>
@@ -66,6 +62,8 @@
 
   <ItemGroup>
     <Content Remove="web.config" />
+	<Content Remove="package*.json" />
+	<Content Remove="bundleconfig.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -74,15 +72,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
   </ItemGroup>
 
-
-
   <ItemGroup>
-    <WCFMetadata Include="Connected Services" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Connected Services\" />
     <Folder Include="wwwroot\lib\" />
   </ItemGroup>
-
+     <ItemGroup>
+        <None Include="appsettings.json" CopyToOutputDirectory="Always" />
+    </ItemGroup>
 </Project>
