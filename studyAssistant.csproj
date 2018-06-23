@@ -15,7 +15,7 @@
     <PackageId>StudyAssistant</PackageId>
     <Authors>Thomas Johan Lines</Authors>
     <Company />
-    <AssemblyName>StudyAssistant</AssemblyName>
+    <AssemblyName>studyAssistant</AssemblyName>
   </PropertyGroup>
 
     <ItemGroup>
