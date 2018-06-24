@@ -9,6 +9,9 @@ using studyAssistant.ViewModels;
 
 namespace studyAssistant.Controllers
 {
+	/// <summary>
+	/// Handles all the requests dealing with user accounts
+	/// </summary>
 	[Authorize]
 	public class AccountController : Controller
 	{
@@ -16,6 +19,12 @@ namespace studyAssistant.Controllers
 		private readonly SignInManager<User> _signInManager;
         private readonly ApplicationDbContext _context;
 
+		/// <summary>
+		/// Class constructor
+		/// </summary>
+		/// <param name="userManager">The userManager object that gets injected into the controller</param>
+		/// <param name="signInManager">The signInManager object that gets injected into the controller</param>
+		/// <param name="context">The ApplicationDbContext object that gets injected into the controller</param>
 		public AccountController(
 				UserManager<User> userManager,
 				SignInManager<User> signInManager,
@@ -26,7 +35,11 @@ namespace studyAssistant.Controllers
             _context = context;
 		}
 
-		
+		/// <summary>
+		/// Returns the view /Account/Login.cshtml
+		/// </summary>
+		/// <param name="returnUrl">The users's url of origin</param>
+		/// <returns></returns>
 		[AllowAnonymous]
 		[HttpGet]
 		public IActionResult Login(string returnUrl)
@@ -35,6 +48,12 @@ namespace studyAssistant.Controllers
             return View();
         }
 
+		/// <summary>
+		/// Logs the user in to the system and redirects him / her to the dashboard if successful
+		/// </summary>
+		/// <param name="details">The user's login details</param>
+		/// <param name="returnUrl"></param>
+		/// <returns>Redirect if successful, the Login view if not</returns>
 		[HttpPost]
 		[AllowAnonymous]
 		[ValidateAntiForgeryToken]
@@ -64,13 +83,20 @@ namespace studyAssistant.Controllers
 			return View(details);
 		}
 
+		/// <summary>
+		/// Logs out the user and then redirects him / her to the homepage
+		/// </summary>
+		/// <returns>RedirectToAction</returns>
         public async Task<IActionResult> Logout()
 	    {
-            // Logs out user and then redirects him / her to homepage
 	        await _signInManager.SignOutAsync();
 	        return RedirectToAction("Index", "Home");
 	    }
 
+		/// <summary>
+		/// Returns the view /Account/Create.cshtml
+		/// </summary>
+		/// <returns></returns>
         [AllowAnonymous]
         [HttpGet]
 		public ViewResult Create()
@@ -78,6 +104,12 @@ namespace studyAssistant.Controllers
             return View();
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="model">Object containing the new user account data</param>
+		/// <param name="returnUrl">The url the user will be redirected to</param>
+		/// <returns>Returns a RedirectToAction</returns>
         [AllowAnonymous]
 		[HttpPost]
 		[ValidateAntiForgeryToken]

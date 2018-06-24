@@ -11,16 +11,35 @@ using studyAssistant.Models;
 
 namespace studyAssistant.Data
 {
+	/// <summary>
+	/// The class used for application-wide data access. 
+	/// </summary>
     public class ApplicationDbContext : IdentityDbContext<User, Role, int>
     {
+		/// <summary>
+		/// The class constructor
+		/// </summary>
+		/// <param name="options"></param>
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
 
+		/// <summary>
+		/// Provides access to the collection of Courses
+		/// </summary>
         public virtual DbSet<Course> Courses { get; set; }
+		/// <summary>
+		/// Provides access to the study sessions
+		/// </summary>
         public virtual DbSet<StudySession> StudySessions { get; set; }
+		/// <summary>
+		/// Provides access to the collection of assignments
+		/// </summary>
         public virtual DbSet<Assignment> Assignments { get; set; }
+		/// <summary>
+		/// Provides access to the study session types
+		/// </summary>
         public virtual DbSet<StudySessionType> StudySessionTypes { get; set; }
 
         /// <summary>
@@ -193,6 +212,11 @@ namespace studyAssistant.Data
                 .FirstOrDefaultAsync(s => s.Id == id);
         }
 
+		/// <summary>
+		/// Gets all active or non-active study sessions in the database
+		/// </summary>
+		/// <param name="onlyActive">True = only active study sessions, false = only non-active study sessions</param>
+		/// <returns>An Iqueryable object of type StudySession</returns>
         public IQueryable<StudySession> GetStudySessions(bool onlyActive)
         {
             IQueryable<StudySession> studySessions = StudySessions
@@ -211,7 +235,7 @@ namespace studyAssistant.Data
         /// </summary>
         /// <param name="userId">The id of the user who owns the study sessions</param>
         /// <param name="onlyActive">Returns all study sessions if false, only active sessions if true</param>
-        /// <returns></returns>
+        /// <returns>An IQueryable object of type StudySession</returns>
         public IQueryable<StudySession> GetStudySessionsByUser(int userId, bool onlyActive)
         {
             IQueryable<StudySession> studySessions = GetStudySessions(onlyActive)
@@ -219,6 +243,12 @@ namespace studyAssistant.Data
             return studySessions;
         }
 
+		/// <summary>
+		/// Gets all active or non-active study sessions that belong to a course
+		/// </summary>
+		/// <param name="courseId">The id of the course that owns the study sessions</param>
+		/// <param name="onlyActive">True = only active study sessions, false = only non-active study sessions</param>
+		/// <returns>An IQueryable object of type StudySession</returns>
         public IQueryable<StudySession> GetStudySessionsByCourse(int? courseId, bool onlyActive)
         {
             return GetStudySessions(onlyActive).Where(c => c.CourseId == courseId);
@@ -228,7 +258,7 @@ namespace studyAssistant.Data
         /// Sets a study session's status to completed
         /// </summary>
         /// <param name="id">Id of the particular study session</param>
-        /// <returns></returns>
+        /// <returns>An integer value representing the number of rows affected in the database, either 1 for success or 0 for fail.</returns>
         public async Task<int> FinishStudySessionAsync(int id)
         {
             var studySession = await GetStudySessionById(id);
@@ -242,7 +272,7 @@ namespace studyAssistant.Data
         /// Finishing an assignment by setting its completion date to todays date
         /// </summary>
         /// <param name="id">The id of the assignment to finish</param>
-        /// <returns></returns>
+        /// <returns>An integer value representing the number of rows affected in the database, either 1 for success or 0 for fail.</returns>
         public async Task<int> FinishAssignmentAsync(int id)
         {
             var assignment = await GetAssignmentById(id);
@@ -266,6 +296,11 @@ namespace studyAssistant.Data
                 .ToListAsync();
         }
         
+		/// <summary>
+		/// Gets the total study time in a particular course
+		/// </summary>
+		/// <param name="courseId">The id of the course</param>
+		/// <returns>A Task of type double representing the total amount of study hours</returns>
         public async Task<double> GetStudyTimeByCourse(int? courseId)
         {
             double sumStudyTime = 0;
@@ -286,6 +321,11 @@ namespace studyAssistant.Data
             return sumStudyTime;
         }
 
+		/// <summary>
+		/// Gets the start date and duration (in hours) for every study session belonging to a course
+		/// </summary>
+		/// <param name="courseId">The id of the course</param>
+		/// <returns>A Task object of type List of StudySession</returns>
         public async Task<List<StudySessionDuration>> GetCompletedStudySessionDurationsByCourse(int courseId)
         {
             var studySessions = await GetStudySessionsByCourse(courseId, false)
@@ -297,6 +337,11 @@ namespace studyAssistant.Data
             return studySessions;
         }
 
+
+		/// <summary>
+		/// Customization of the models
+		/// </summary>
+		/// <param name="builder">The instance of ModelMbuilder used to make the changes</param>
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
