@@ -13,20 +13,36 @@ using studyAssistant.Models;
 
 namespace studyAssistant.Controllers
 {
-    
+    /// <summary>
+	/// Handles all the requests to the route /Assignment
+	/// </summary>
     [Authorize]
     public class AssignmentController : Controller
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<User> _userManager;
 
+		/// <summary>
+		/// Class constructor
+		/// </summary>
+		/// <param name="userManager">The UserManager object used for injection</param>
+		/// <param name="context">The ApplicationDBContext object used for injection</param>
         public AssignmentController(UserManager<User> userManager, ApplicationDbContext context)
         {
             _context = context;
             _userManager = userManager;
         }
 
-        public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, int? page, bool onlyActiveAssignments)
+		/// <summary>
+		/// Displays a list of the user's assignments, both active and inactive, with searching, sorting and paging functionality.
+		/// </summary>
+		/// <param name="sortOrder">Which columns to sort by</param>
+		/// <param name="searchString">The search string supplied by the user</param>
+		/// <param name="currentFilter">Stores the search string for navigation between pages</param>
+		/// <param name="page">Number of the page to display</param>
+		/// <param name="onlyActiveAssignments">True = only shows active assignments, false = shows all assignments</param>
+		/// <returns>View with a model consisting of a paginated list of assignments</returns>
+        public async Task<IActionResult> Index(string sortOrder, string searchString, string currentFilter, int? page, bool onlyActiveAssignments)
         {
             var currentUser = await _userManager.GetUserAsync(HttpContext.User);
            
@@ -70,21 +86,15 @@ namespace studyAssistant.Controllers
                 descending = true;
             }
 
-
-            //var activeAssignments = await _context.Assignments
-            //    .AsNoTracking()
-            //    .Include(a => a.Course)
-            //    .Where(a => a.Course.UserId == currentUser.Id)
-            //    .Where(a => a.DateCompleted == null)
-            //    .ToListAsync();
-
             return View(await PaginatedList<Assignment>.CreateAsync(
                 _context.GetAssignmentsPagedList(currentUser.Id, searchString, sortOrder, descending,
                     onlyActiveAssignments), page ?? 1, pageSize));
-
-            //return View(await _context.GetAssignments(currentUser.Id, null, true).ToListAsync());
         }
 
+		/// <summary>
+		/// Stores the user's courses in ViewBag and displays the view /Assignment/Create.cshtml
+		/// </summary>
+		/// <returns>View with a model consisting of an Assignment object</returns>
         public async Task<IActionResult> Create()
         {
             SystemMessage msg;
@@ -106,6 +116,11 @@ namespace studyAssistant.Controllers
             return View(assignment);
         }
 
+		/// <summary>
+		/// Receives an Assignment object from the request body, passes it on to the ApplicationDBContext object which then tries to save it.
+		/// </summary>
+		/// <param name="assignment">The Assignment object received from the request body</param>
+		/// <returns>RedirectToAction(Index) if successfull, View(assignment) if unsuccessfull</returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Assignment assignment)
@@ -119,10 +134,12 @@ namespace studyAssistant.Controllers
                 return View(assignment);
             }
 
+			
             var currentUser = await _userManager.GetUserAsync(HttpContext.User);
 
             try
             {
+				// Trying to save the new assignment
                 await _context.Assignments.AddAsync(assignment);
                 var saveresult = await _context.SaveChangesAsync();
                 msg = new SystemMessage(MessageType.Success, "Oppgaven ble lagret!");
@@ -133,7 +150,9 @@ namespace studyAssistant.Controllers
                 msg = new SystemMessage(MessageType.Critical,
                     "Kunne ikke lagre oppgaven. Vennligst prøv igjen, og ta kontakt hvis problemet ikke løser seg.");
                 ViewBag.Message = msg.GetSystemMessage();
-                ViewBag.Courses = await _context.PopulateCourseData(currentUser.Id);
+                
+				// Making the user's course list available to the view
+	            ViewBag.Courses = await _context.PopulateCourseData(currentUser.Id);
                 return View(assignment);
             }
             
@@ -142,6 +161,11 @@ namespace studyAssistant.Controllers
             return RedirectToAction("Index");
         }
 
+		/// <summary>
+		/// Receives an assignment id from the request body, checks that it exists and that it really belongs to the user and then displays it if successfull
+		/// </summary>
+		/// <param name="id">The assignment id</param>
+		/// <returns>RedirectToAction(Index) with a status message in TempData indicating success or failure</returns>
         public async Task<IActionResult> Edit(int id)
         {
             CultureInfo cultureInfo = Thread.CurrentThread.CurrentCulture;
@@ -171,6 +195,11 @@ namespace studyAssistant.Controllers
         }
 
 
+		/// <summary>
+		/// Receives an assignment id from the request body, passes it to the ApplicationDBContext which then retrieves the persisted version and tries to update it.
+		/// </summary>
+		/// <param name="id"></param>
+		/// <returns>RedirectToAction(Index) with a status message stored in TempData</returns>
         [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> EditPost(int? id)
@@ -204,7 +233,11 @@ namespace studyAssistant.Controllers
         }
 
 
-
+		/// <summary>
+		/// Receives an assignment id from the request body, checks that it exists and that it belongs to the user, and finally displays a delete form to the user
+		/// </summary>
+		/// <param name="id"></param>
+		/// <returns>View(Assignment) if successfull, RedirectToAction(Index) if unsuccessfull</returns>
         public async Task<IActionResult> Delete(int id)
         {
             var currentUser = await _userManager.GetUserAsync(HttpContext.User);
@@ -227,6 +260,12 @@ namespace studyAssistant.Controllers
         }
 
 
+		/// <summary>
+		/// Receives an assignment id from the request body, passes it to the ApplicationDBContext object, which checks that it
+		/// exists and that it belongs to the user trying to delete it. Finally it attempts to delete it if successfull.
+		/// </summary>
+		/// <param name="id"></param>
+		/// <returns>RedirectToAction(Index) with a status message stored in TempData</returns>
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -261,6 +300,11 @@ namespace studyAssistant.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+		/// <summary>
+		/// Receives an assignment id from the request body, passes it to the ApplicationDBContext object, which then tries to set the assignment's completion date / time to the current date / time
+		/// </summary>
+		/// <param name="id">The id of the assignment to finish</param>
+		/// <returns>RedirectToAction(Index) with a stored status message in TempData</returns>
         public async Task<IActionResult> Finish(int id)
         {
             SystemMessage msg;
@@ -279,6 +323,11 @@ namespace studyAssistant.Controllers
             return RedirectToAction("Index");
         }
 
+		/// <summary>
+		/// Receives an assignment id from the request body, passes it to the ApplicationDBContext object, which retrieves it. If it exists and it belongs to the current user, it gets sent to the view
+		/// </summary>
+		/// <param name="id"></param>
+		/// <returns>View(assignment) if successfull, RedirectToAction(Index) with a status message in TempData if unsuccessfull</returns>
         public async Task<IActionResult> Info(int? id)
         {
             if (id == null)

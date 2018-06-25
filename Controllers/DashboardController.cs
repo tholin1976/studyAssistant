@@ -9,7 +9,7 @@ using studyAssistant.Core.Domain;
 using studyAssistant.Data;
 using studyAssistant.ViewModels;
 
-namespace studyAssistant.Web.Controllers
+namespace studyAssistant.Controllers
 {
     [Authorize]
     public class DashboardController : Controller

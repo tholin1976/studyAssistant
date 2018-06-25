@@ -20,6 +20,10 @@ namespace studyAssistant
     public class Startup
     {
 
+		/// <summary>
+		/// Class constructor
+		/// </summary>
+		/// <param name="env">The hosting environment the app will run in</param>
 	    public Startup(IHostingEnvironment env)
 	    {
 		    var builder = new ConfigurationBuilder()
@@ -32,8 +36,12 @@ namespace studyAssistant
 
 	    public IConfigurationRoot Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        
+        /// <summary>
+		/// This method gets called by the runtime during startup. Application services are added here.
+		/// </summary>
+		/// <param name="services">The collection of services available to the application</param>
+	    public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("defaultConnection")));

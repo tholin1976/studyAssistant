@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using System;
-using System.Collections.Generic;
 
-namespace studyAssistant.Web.Migrations
+namespace studyAssistant.Migrations
 {
     public partial class AddedToFromDatesCourse : Migration
     {

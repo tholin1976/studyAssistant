@@ -29,14 +29,17 @@ namespace studyAssistant.Data
 		/// Provides access to the collection of Courses
 		/// </summary>
         public virtual DbSet<Course> Courses { get; set; }
+
 		/// <summary>
 		/// Provides access to the study sessions
 		/// </summary>
         public virtual DbSet<StudySession> StudySessions { get; set; }
+
 		/// <summary>
 		/// Provides access to the collection of assignments
 		/// </summary>
         public virtual DbSet<Assignment> Assignments { get; set; }
+
 		/// <summary>
 		/// Provides access to the study session types
 		/// </summary>
@@ -336,8 +339,7 @@ namespace studyAssistant.Data
                 .ToListAsync();
             return studySessions;
         }
-
-
+		
 		/// <summary>
 		/// Customization of the models
 		/// </summary>

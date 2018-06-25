@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
@@ -10,20 +8,32 @@ using studyAssistant.Data;
 using studyAssistant.Core.Domain;
 using studyAssistant.Models;
 
-namespace studyAssistant.Web.Controllers
+namespace studyAssistant.Controllers
 {
+	/// <summary>
+	/// Handles the requests to the route /Calendar
+	/// </summary>
     [Authorize]
     public class CalendarController : Controller
     {
         private readonly ApplicationDbContext _context;
         private readonly UserManager<User> _userManager;
 
+		/// <summary>
+		/// Class constructor
+		/// </summary>
+		/// <param name="context">The ApplicationDBContext object used for dependency injection</param>
+		/// <param name="userManager">The UserManager object used for dependency injection</param>
         public CalendarController(ApplicationDbContext context, UserManager<User> userManager)
         {
             _context = context;
             _userManager = userManager;
         }
 
+		/// <summary>
+		/// Gets the current user's active study sessions and assignments and displays them in a calendar
+		/// </summary>
+		/// <returns>View(events)</returns>
         public async Task<IActionResult> Index()
         {
             var currentUser = await _userManager.GetUserAsync(HttpContext.User);

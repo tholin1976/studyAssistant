@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -9,12 +7,11 @@ using Microsoft.EntityFrameworkCore;
 using studyAssistant.Core.Domain;
 using studyAssistant.Data;
 using studyAssistant.Models;
-using studyAssistant.ViewModels;
 
 namespace studyAssistant.Controllers
 {
-    
-    [Authorize]
+
+	[Authorize]
     public class StudySessionController : Controller
     {
         private readonly ApplicationDbContext _context;

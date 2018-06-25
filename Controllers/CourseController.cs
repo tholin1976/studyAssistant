@@ -1,33 +1,45 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using studyAssistant.Core.Domain;
 using studyAssistant.Data;
-using System.Linq;
-using ChartJSCore.Models;
 using studyAssistant.Models;
 
-namespace studyAssistant.Web.Controllers
+namespace studyAssistant.Controllers
 {
 
-    [Authorize]
+	/// <summary>
+	/// Handles the requests to the route /Course
+	/// </summary>
+	[Authorize]
     public class CourseController : Controller
     {
         private readonly UserManager<User> _userManager;
         private readonly ApplicationDbContext _context;
 
-
-        public CourseController(UserManager<User> userManager, ApplicationDbContext context)
+		/// <summary>
+		/// Class constructor
+		/// </summary>
+		/// <param name="userManager">The UserManager object used for dependency injection</param>
+		/// <param name="context">The ApplicationDBContext object used for dependency injection</param>
+		public CourseController(UserManager<User> userManager, ApplicationDbContext context)
         {
             _context = context;
             _userManager = userManager;
 
         }
 
+		/// <summary>
+		/// Displays a list of the current user's courses with pagination, search and sorting functionality
+		/// </summary>
+		/// <param name="sortOrder">The column to sort by</param>
+		/// <param name="currentFilter">The current searchString stored for navigation</param>
+		/// <param name="searchString">The string to search for</param>
+		/// <param name="page">The page number to display</param>
+		/// <param name="onlyActiveCourses">True = display only active courses, false = display all courses</param>
+		/// <returns>View</returns>
         public async Task<ViewResult> Index(string sortOrder, string currentFilter, string searchString, int? page, bool onlyActiveCourses)
         {
             const int pageSize = 20;
@@ -76,6 +88,10 @@ namespace studyAssistant.Web.Controllers
             return View(await PaginatedList<Course>.CreateAsync(_context.GetCoursesPagedList(currentUser.Id, searchString, sortOrder, descending, onlyActiveCourses), page ?? 1, pageSize));
         }
 
+		/// <summary>
+		/// Displays a form for creating a new course
+		/// </summary>
+		/// <returns>View</returns>
         [HttpGet]
         public ViewResult Create()
         {
@@ -83,6 +99,11 @@ namespace studyAssistant.Web.Controllers
             return View();
         }
 
+		/// <summary>
+		/// Receives a new Course object from the request body, passes it to the ApplicationDBContext object which then tries to save it
+		/// </summary>
+		/// <param name="course">The new Course object</param>
+		/// <returns>RedirectToAction(Index) if successfull, View(course) if unsuccessfull</returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Course course)
@@ -120,6 +141,11 @@ namespace studyAssistant.Web.Controllers
 
         }
 
+		/// <summary>
+		/// Receives a course id from the request body, passes it to the ApplicationDbContext object, which retrieves it. It is then displayed in an edit form if it exists and belongs to the current user
+		/// </summary>
+		/// <param name="id">The id of the course to edit</param>
+		/// <returns>View(course) if successfull, RedirectToAction(Index) if unsuccessfull</returns>
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
@@ -143,6 +169,11 @@ namespace studyAssistant.Web.Controllers
             return View(course);
         }
 
+		/// <summary>
+		/// Retrieves an edited Course object from the request body, passes it to the ApplicationDbContext object which then tries to save it.
+		/// </summary>
+		/// <param name="course">The edited Course object</param>
+		/// <returns>RedirectToAction(Index) if successful, View(course) if unsuccessfull</returns>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Course course)
@@ -174,6 +205,12 @@ namespace studyAssistant.Web.Controllers
             return RedirectToAction("Index");
         }
 
+		/// <summary>
+		/// Receives a course id from the request body, passes it to the ApplicationDBContext, which retrieves the course if it exists, and then finally displays a
+		/// delete warning form if it belongs to the current user
+		/// </summary>
+		/// <param name="id">The id of the course to delete</param>
+		/// <returns>View(course) if successfull, RedirectToAction(Index) if unsuccessfull</returns>
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

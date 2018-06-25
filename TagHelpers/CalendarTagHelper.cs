@@ -12,15 +12,7 @@ using studyAssistant.Models;
 namespace studyAssistant.TagHelpers
 {
 
-    public static class DateTimeExtensions
-    {
-        public static DateTime StartOfWeek(this DateTime dt, DayOfWeek startOfWeek)
-        {
-            int diff = (7 + (dt.DayOfWeek - startOfWeek)) % 7;
-            return dt.AddDays(-1 * diff).Date;
-        }
-    }
-    public static class EnumExtensions
+   public static class EnumExtensions
     {
         /// <summary>
         ///     A generic extension method that aids in reflecting 
@@ -35,6 +27,9 @@ namespace studyAssistant.TagHelpers
                 .GetCustomAttribute<TAttribute>();
         }
     }
+	/// <summary>
+	/// Adds Norwegian display notation to the days of the week
+	/// </summary>
     public enum DaysOfWeek
     {
         [Display(Name = "Mandag")]
@@ -53,6 +48,9 @@ namespace studyAssistant.TagHelpers
         Sunday
    }
 
+	/// <summary>
+	/// Generates and displays the month and year specified by <see cref="Month"/> and <see cref="Year"/>.
+	/// </summary>
     [HtmlTargetElement("calendar", TagStructure = TagStructure.NormalOrSelfClosing)]
 	public class CalendarTagHelper : TagHelper
 	{
