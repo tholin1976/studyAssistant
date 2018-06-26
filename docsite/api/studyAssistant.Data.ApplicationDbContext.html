@@ -1,0 +1,1467 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ApplicationDbContext
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ApplicationDbContext
+   ">
+    <meta name="generator" content="docfx 2.36.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="studyAssistant.Data.ApplicationDbContext">
+  
+  
+  <h1 id="studyAssistant_Data_ApplicationDbContext" data-uid="studyAssistant.Data.ApplicationDbContext" class="text-break">Class ApplicationDbContext
+  </h1>
+  <div class="markdown level0 summary"><p>The class used for application-wide data access.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Microsoft.EntityFrameworkCore.DbContext</span></div>
+    <div class="level2"><span class="xref">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserContext</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.User.html">User</a>, <span class="xref">System.Int32</span>, <span class="xref">Microsoft.AspNetCore.Identity.IdentityUserClaim</span>&lt;<span class="xref">System.Int32</span>&gt;, <span class="xref">Microsoft.AspNetCore.Identity.IdentityUserLogin</span>&lt;<span class="xref">System.Int32</span>&gt;, <span class="xref">Microsoft.AspNetCore.Identity.IdentityUserToken</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</div>
+    <div class="level3"><span class="xref">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.User.html">User</a>, <a class="xref" href="studyAssistant.Core.Domain.Role.html">Role</a>, <span class="xref">System.Int32</span>, <span class="xref">Microsoft.AspNetCore.Identity.IdentityUserClaim</span>&lt;<span class="xref">System.Int32</span>&gt;, <span class="xref">Microsoft.AspNetCore.Identity.IdentityUserRole</span>&lt;<span class="xref">System.Int32</span>&gt;, <span class="xref">Microsoft.AspNetCore.Identity.IdentityUserLogin</span>&lt;<span class="xref">System.Int32</span>&gt;, <span class="xref">Microsoft.AspNetCore.Identity.IdentityRoleClaim</span>&lt;<span class="xref">System.Int32</span>&gt;, <span class="xref">Microsoft.AspNetCore.Identity.IdentityUserToken</span>&lt;<span class="xref">System.Int32</span>&gt;&gt;</div>
+    <div class="level4"><span class="xref">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.User.html">User</a>, <a class="xref" href="studyAssistant.Core.Domain.Role.html">Role</a>, <span class="xref">System.Int32</span>&gt;</div>
+    <div class="level5"><span class="xref">ApplicationDbContext</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+    <div><span class="xref">Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure</span>&lt;<span class="xref">System.IServiceProvider</span>&gt;</div>
+    <div><span class="xref">Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies</span></div>
+    <div><span class="xref">Microsoft.EntityFrameworkCore.Internal.IDbSetCache</span></div>
+    <div><span class="xref">Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext&lt;studyAssistant.Core.Domain.User, studyAssistant.Core.Domain.Role, System.Int32, Microsoft.AspNetCore.Identity.IdentityUserClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserRole&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserLogin&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityRoleClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserToken&lt;System.Int32&gt;&gt;.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext&lt;studyAssistant.Core.Domain.User, studyAssistant.Core.Domain.Role, System.Int32, Microsoft.AspNetCore.Identity.IdentityUserClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserRole&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserLogin&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityRoleClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserToken&lt;System.Int32&gt;&gt;.UserRoles</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext&lt;studyAssistant.Core.Domain.User, studyAssistant.Core.Domain.Role, System.Int32, Microsoft.AspNetCore.Identity.IdentityUserClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserRole&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserLogin&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityRoleClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserToken&lt;System.Int32&gt;&gt;.Roles</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext&lt;studyAssistant.Core.Domain.User, studyAssistant.Core.Domain.Role, System.Int32, Microsoft.AspNetCore.Identity.IdentityUserClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserRole&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserLogin&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityRoleClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserToken&lt;System.Int32&gt;&gt;.RoleClaims</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserContext&lt;studyAssistant.Core.Domain.User, System.Int32, Microsoft.AspNetCore.Identity.IdentityUserClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserLogin&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserToken&lt;System.Int32&gt;&gt;.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserContext&lt;studyAssistant.Core.Domain.User, System.Int32, Microsoft.AspNetCore.Identity.IdentityUserClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserLogin&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserToken&lt;System.Int32&gt;&gt;.Users</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserContext&lt;studyAssistant.Core.Domain.User, System.Int32, Microsoft.AspNetCore.Identity.IdentityUserClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserLogin&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserToken&lt;System.Int32&gt;&gt;.UserClaims</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserContext&lt;studyAssistant.Core.Domain.User, System.Int32, Microsoft.AspNetCore.Identity.IdentityUserClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserLogin&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserToken&lt;System.Int32&gt;&gt;.UserLogins</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserContext&lt;studyAssistant.Core.Domain.User, System.Int32, Microsoft.AspNetCore.Identity.IdentityUserClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserLogin&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserToken&lt;System.Int32&gt;&gt;.UserTokens</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbSetCache.GetOrAddSet(Microsoft.EntityFrameworkCore.Internal.IDbSetSource, System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Set&lt;TEntity&gt;()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.SaveChanges()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.SaveChanges(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(System.Boolean, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SetPool(Microsoft.EntityFrameworkCore.Internal.IDbContextPool)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SnapshotConfiguration()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.Resurrect(Microsoft.EntityFrameworkCore.Internal.DbContextPoolConfigurationSnapshot)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.ResetState()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Entry&lt;TEntity&gt;(TEntity)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Entry(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Add&lt;TEntity&gt;(TEntity)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.AddAsync&lt;TEntity&gt;(TEntity, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Attach&lt;TEntity&gt;(TEntity)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Update&lt;TEntity&gt;(TEntity)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Remove&lt;TEntity&gt;(TEntity)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Add(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.AddAsync(System.Object, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Attach(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Update(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Remove(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.AddRange(System.Collections.Generic.IEnumerable&lt;System.Object&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.AddRangeAsync(System.Collections.Generic.IEnumerable&lt;System.Object&gt;, System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.AttachRange(System.Collections.Generic.IEnumerable&lt;System.Object&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.UpdateRange(System.Collections.Generic.IEnumerable&lt;System.Object&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.RemoveRange(System.Collections.Generic.IEnumerable&lt;System.Object&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Find(System.Type, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type, System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.FindAsync(System.Type, System.Object[], System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Find&lt;TEntity&gt;(System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.FindAsync&lt;TEntity&gt;(System.Object[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.FindAsync&lt;TEntity&gt;(System.Object[], System.Threading.CancellationToken)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Database</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.ChangeTracker</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Model</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.SetSource</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.EntityFinderSource</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.QueryProvider</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.StateManager</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.ChangeDetector</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.EntityGraphAttacher</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.UpdateLogger</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.InfrastructureLogger</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure&lt;System.IServiceProvider&gt;.Instance</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="studyAssistant.Data.html">studyAssistant.Data</a></h6>
+  <h6><strong>Assembly</strong>: studyAssistant.dll</h6>
+  <h5 id="studyAssistant_Data_ApplicationDbContext_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ApplicationDbContext : IdentityDbContext&lt;User, Role, int&gt;, IDisposable, IInfrastructure&lt;IServiceProvider&gt;, IDbContextDependencies, IDbSetCache, IDbContextPoolable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext__ctor_Microsoft_EntityFrameworkCore_DbContextOptions_studyAssistant_Data_ApplicationDbContext__.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.%23ctor(Microsoft.EntityFrameworkCore.DbContextOptions%7BstudyAssistant.Data.ApplicationDbContext%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L23">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext__ctor_" data-uid="studyAssistant.Data.ApplicationDbContext.#ctor*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext__ctor_Microsoft_EntityFrameworkCore_DbContextOptions_studyAssistant_Data_ApplicationDbContext__" data-uid="studyAssistant.Data.ApplicationDbContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{studyAssistant.Data.ApplicationDbContext})">ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt;)</h4>
+  <div class="markdown level1 summary"><p>The class constructor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ApplicationDbContext(DbContextOptions&lt;ApplicationDbContext&gt; options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.EntityFrameworkCore.DbContextOptions</span>&lt;<a class="xref" href="studyAssistant.Data.ApplicationDbContext.html">ApplicationDbContext</a>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_Assignments.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.Assignments%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L41">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_Assignments_" data-uid="studyAssistant.Data.ApplicationDbContext.Assignments*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_Assignments" data-uid="studyAssistant.Data.ApplicationDbContext.Assignments">Assignments</h4>
+  <div class="markdown level1 summary"><p>Provides access to the collection of assignments</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;Assignment&gt; Assignments { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.EntityFrameworkCore.DbSet</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.Assignment.html">Assignment</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_Courses.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.Courses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L31">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_Courses_" data-uid="studyAssistant.Data.ApplicationDbContext.Courses*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_Courses" data-uid="studyAssistant.Data.ApplicationDbContext.Courses">Courses</h4>
+  <div class="markdown level1 summary"><p>Provides access to the collection of Courses</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;Course&gt; Courses { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.EntityFrameworkCore.DbSet</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.Course.html">Course</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_StudySessions.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.StudySessions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L36">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_StudySessions_" data-uid="studyAssistant.Data.ApplicationDbContext.StudySessions*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_StudySessions" data-uid="studyAssistant.Data.ApplicationDbContext.StudySessions">StudySessions</h4>
+  <div class="markdown level1 summary"><p>Provides access to the study sessions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;StudySession&gt; StudySessions { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.EntityFrameworkCore.DbSet</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.StudySession.html">StudySession</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_StudySessionTypes.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.StudySessionTypes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L46">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_StudySessionTypes_" data-uid="studyAssistant.Data.ApplicationDbContext.StudySessionTypes*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_StudySessionTypes" data-uid="studyAssistant.Data.ApplicationDbContext.StudySessionTypes">StudySessionTypes</h4>
+  <div class="markdown level1 summary"><p>Provides access to the study session types</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual DbSet&lt;StudySessionType&gt; StudySessionTypes { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.EntityFrameworkCore.DbSet</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.StudySessionType.html">StudySessionType</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_FinishAssignmentAsync_System_Int32_.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.FinishAssignmentAsync(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L279">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_FinishAssignmentAsync_" data-uid="studyAssistant.Data.ApplicationDbContext.FinishAssignmentAsync*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_FinishAssignmentAsync_System_Int32_" data-uid="studyAssistant.Data.ApplicationDbContext.FinishAssignmentAsync(System.Int32)">FinishAssignmentAsync(Int32)</h4>
+  <div class="markdown level1 summary"><p>Finishing an assignment by setting its completion date to todays date</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;int&gt; FinishAssignmentAsync(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The id of the assignment to finish</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>An integer value representing the number of rows affected in the database, either 1 for success or 0 for fail.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_FinishStudySessionAsync_System_Int32_.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.FinishStudySessionAsync(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L265">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_FinishStudySessionAsync_" data-uid="studyAssistant.Data.ApplicationDbContext.FinishStudySessionAsync*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_FinishStudySessionAsync_System_Int32_" data-uid="studyAssistant.Data.ApplicationDbContext.FinishStudySessionAsync(System.Int32)">FinishStudySessionAsync(Int32)</h4>
+  <div class="markdown level1 summary"><p>Sets a study session's status to completed</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;int&gt; FinishStudySessionAsync(int id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>Id of the particular study session</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><p>An integer value representing the number of rows affected in the database, either 1 for success or 0 for fail.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_GetAssignmentById_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.GetAssignmentById(System.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L169">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_GetAssignmentById_" data-uid="studyAssistant.Data.ApplicationDbContext.GetAssignmentById*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_GetAssignmentById_System_Nullable_System_Int32__" data-uid="studyAssistant.Data.ApplicationDbContext.GetAssignmentById(System.Nullable{System.Int32})">GetAssignmentById(Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets a specified assignment by Id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Assignment&gt; GetAssignmentById(int? id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The Id of the course to get</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.Assignment.html">Assignment</a>&gt;</td>
+        <td><p>A single assignment or null if the specified assignment doesn't exist</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_GetAssignments_System_Int32_System_Nullable_System_Int32__System_Boolean_System_Double_.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.GetAssignments(System.Int32%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Boolean%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L184">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_GetAssignments_" data-uid="studyAssistant.Data.ApplicationDbContext.GetAssignments*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_GetAssignments_System_Int32_System_Nullable_System_Int32__System_Boolean_System_Double_" data-uid="studyAssistant.Data.ApplicationDbContext.GetAssignments(System.Int32,System.Nullable{System.Int32},System.Boolean,System.Double)">GetAssignments(Int32, Nullable&lt;Int32&gt;, Boolean, Double)</h4>
+  <div class="markdown level1 summary"><p>Gets a list of assignments belonging to the specified user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IQueryable&lt;Assignment&gt; GetAssignments(int userId, int? courseId, bool isActive, double timeInterval = 0)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The id of the user who owns the assignments</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">courseId</span></td>
+        <td><p>The id of the course the assignments are given in</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">isActive</span></td>
+        <td><p>True returns only active assignments, false returns all assignments</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">timeInterval</span></td>
+        <td><p>The time period for the search, i.e. 7 returns assignments with deadline in the next 7 days</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Linq.IQueryable</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.Assignment.html">Assignment</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_GetAssignmentsPagedList_System_Int32_System_String_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.GetAssignmentsPagedList(System.Int32%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L95">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_GetAssignmentsPagedList_" data-uid="studyAssistant.Data.ApplicationDbContext.GetAssignmentsPagedList*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_GetAssignmentsPagedList_System_Int32_System_String_System_String_System_Boolean_System_Boolean_" data-uid="studyAssistant.Data.ApplicationDbContext.GetAssignmentsPagedList(System.Int32,System.String,System.String,System.Boolean,System.Boolean)">GetAssignmentsPagedList(Int32, String, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets a list of assignments belonging to the specified user with pagination data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IQueryable&lt;Assignment&gt; GetAssignmentsPagedList(int userId, string searchString, string sortOrder, bool descending, bool onlyActiveAssignments = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The is of the user who owns the assignments</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">searchString</span></td>
+        <td><p>The search string for the assignment title search</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sortOrder</span></td>
+        <td><p>Specifies which column to sort by</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">descending</span></td>
+        <td><p>True returns a descending list, false returns an ascending list</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">onlyActiveAssignments</span></td>
+        <td><p>True returns only active assignments, false returns all assignments</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Linq.IQueryable</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.Assignment.html">Assignment</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_GetCompletedStudySessionDurationsByCourse_System_Int32_.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.GetCompletedStudySessionDurationsByCourse(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L332">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_GetCompletedStudySessionDurationsByCourse_" data-uid="studyAssistant.Data.ApplicationDbContext.GetCompletedStudySessionDurationsByCourse*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_GetCompletedStudySessionDurationsByCourse_System_Int32_" data-uid="studyAssistant.Data.ApplicationDbContext.GetCompletedStudySessionDurationsByCourse(System.Int32)">GetCompletedStudySessionDurationsByCourse(Int32)</h4>
+  <div class="markdown level1 summary"><p>Gets the start date and duration (in hours) for every study session belonging to a course</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;StudySessionDuration&gt;&gt; GetCompletedStudySessionDurationsByCourse(int courseId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">courseId</span></td>
+        <td><p>The id of the course</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="studyAssistant.Models.StudySessionDuration.html">StudySessionDuration</a>&gt;&gt;</td>
+        <td><p>A Task object of type List of StudySession</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_GetCourseById_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.GetCourseById(System.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L53">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_GetCourseById_" data-uid="studyAssistant.Data.ApplicationDbContext.GetCourseById*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_GetCourseById_System_Nullable_System_Int32__" data-uid="studyAssistant.Data.ApplicationDbContext.GetCourseById(System.Nullable{System.Int32})">GetCourseById(Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets a single course by Id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;Course&gt; GetCourseById(int? id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The Id of the course to get</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.Course.html">Course</a>&gt;</td>
+        <td><p>A single course or null if the specified course doesn't exist</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_GetCourses_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.GetCourses(System.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L152">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_GetCourses_" data-uid="studyAssistant.Data.ApplicationDbContext.GetCourses*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_GetCourses_System_Int32_System_Boolean_" data-uid="studyAssistant.Data.ApplicationDbContext.GetCourses(System.Int32,System.Boolean)">GetCourses(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets a list of courses belonging to the specified user</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IQueryable&lt;Course&gt; GetCourses(int userId, bool onlyActiveCourses = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The id of the user who owns the courses</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">onlyActiveCourses</span></td>
+        <td><p>True returns only active courses, false returns <em>all</em> courses</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Linq.IQueryable</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.Course.html">Course</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_GetCoursesPagedList_System_Int32_System_String_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.GetCoursesPagedList(System.Int32%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L67">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_GetCoursesPagedList_" data-uid="studyAssistant.Data.ApplicationDbContext.GetCoursesPagedList*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_GetCoursesPagedList_System_Int32_System_String_System_String_System_Boolean_System_Boolean_" data-uid="studyAssistant.Data.ApplicationDbContext.GetCoursesPagedList(System.Int32,System.String,System.String,System.Boolean,System.Boolean)">GetCoursesPagedList(Int32, String, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets a list of courses belonging to the specified user with pagination data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IQueryable&lt;Course&gt; GetCoursesPagedList(int userId, string searchString, string sortOrder, bool descending, bool onlyActiveCourses = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The id of the user who owns the courses</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">searchString</span></td>
+        <td><p>The search string for the course title search</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sortOrder</span></td>
+        <td><p>Specifies which column to sort by</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">descending</span></td>
+        <td><p>True returns a descending list, false returns an ascending list</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">onlyActiveCourses</span></td>
+        <td><p>True returns only active courses, false returns all courses</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Linq.IQueryable</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.Course.html">Course</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_GetStudySessionById_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.GetStudySessionById(System.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L210">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_GetStudySessionById_" data-uid="studyAssistant.Data.ApplicationDbContext.GetStudySessionById*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_GetStudySessionById_System_Nullable_System_Int32__" data-uid="studyAssistant.Data.ApplicationDbContext.GetStudySessionById(System.Nullable{System.Int32})">GetStudySessionById(Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets a specified study session by Id</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;StudySession&gt; GetStudySessionById(int? id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The Id of the study session to get</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.StudySession.html">StudySession</a>&gt;</td>
+        <td><p>A single study session or null if the specified assignment doesn't exist</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_GetStudySessions_System_Boolean_.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.GetStudySessions(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L223">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_GetStudySessions_" data-uid="studyAssistant.Data.ApplicationDbContext.GetStudySessions*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_GetStudySessions_System_Boolean_" data-uid="studyAssistant.Data.ApplicationDbContext.GetStudySessions(System.Boolean)">GetStudySessions(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets all active or non-active study sessions in the database</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IQueryable&lt;StudySession&gt; GetStudySessions(bool onlyActive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">onlyActive</span></td>
+        <td><p>True = only active study sessions, false = only non-active study sessions</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Linq.IQueryable</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.StudySession.html">StudySession</a>&gt;</td>
+        <td><p>An Iqueryable object of type StudySession</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_GetStudySessionsByCourse_System_Nullable_System_Int32__System_Boolean_.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.GetStudySessionsByCourse(System.Nullable%7BSystem.Int32%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L255">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_GetStudySessionsByCourse_" data-uid="studyAssistant.Data.ApplicationDbContext.GetStudySessionsByCourse*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_GetStudySessionsByCourse_System_Nullable_System_Int32__System_Boolean_" data-uid="studyAssistant.Data.ApplicationDbContext.GetStudySessionsByCourse(System.Nullable{System.Int32},System.Boolean)">GetStudySessionsByCourse(Nullable&lt;Int32&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets all active or non-active study sessions that belong to a course</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IQueryable&lt;StudySession&gt; GetStudySessionsByCourse(int? courseId, bool onlyActive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">courseId</span></td>
+        <td><p>The id of the course that owns the study sessions</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">onlyActive</span></td>
+        <td><p>True = only active study sessions, false = only non-active study sessions</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Linq.IQueryable</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.StudySession.html">StudySession</a>&gt;</td>
+        <td><p>An IQueryable object of type StudySession</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_GetStudySessionsByUser_System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.GetStudySessionsByUser(System.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L242">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_GetStudySessionsByUser_" data-uid="studyAssistant.Data.ApplicationDbContext.GetStudySessionsByUser*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_GetStudySessionsByUser_System_Int32_System_Boolean_" data-uid="studyAssistant.Data.ApplicationDbContext.GetStudySessionsByUser(System.Int32,System.Boolean)">GetStudySessionsByUser(Int32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets a user's study sessions</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IQueryable&lt;StudySession&gt; GetStudySessionsByUser(int userId, bool onlyActive)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The id of the user who owns the study sessions</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">onlyActive</span></td>
+        <td><p>Returns all study sessions if false, only active sessions if true</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Linq.IQueryable</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.StudySession.html">StudySession</a>&gt;</td>
+        <td><p>An IQueryable object of type StudySession</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_GetStudySessionsPagedList_System_Int32_System_String_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.GetStudySessionsPagedList(System.Int32%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L124">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_GetStudySessionsPagedList_" data-uid="studyAssistant.Data.ApplicationDbContext.GetStudySessionsPagedList*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_GetStudySessionsPagedList_System_Int32_System_String_System_String_System_Boolean_System_Boolean_" data-uid="studyAssistant.Data.ApplicationDbContext.GetStudySessionsPagedList(System.Int32,System.String,System.String,System.Boolean,System.Boolean)">GetStudySessionsPagedList(Int32, String, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets a list of study sessions belonging to the specified user with pagination data</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IQueryable&lt;StudySession&gt; GetStudySessionsPagedList(int userId, string searchString, string sortOrder, bool descending, bool onlyActiveStudySessions = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The id of the user who owns the study sessions</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">searchString</span></td>
+        <td><p>The search string for the study session search</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sortOrder</span></td>
+        <td><p>Specifies which column to order by</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">descending</span></td>
+        <td><p>True returns a descending list, false returns an ascending list</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">onlyActiveStudySessions</span></td>
+        <td><p>True returns only planned (or active) study sessions, false returns all study sessions</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Linq.IQueryable</span>&lt;<a class="xref" href="studyAssistant.Core.Domain.StudySession.html">StudySession</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_GetStudyTimeByCourse_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.GetStudyTimeByCourse(System.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L307">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_GetStudyTimeByCourse_" data-uid="studyAssistant.Data.ApplicationDbContext.GetStudyTimeByCourse*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_GetStudyTimeByCourse_System_Nullable_System_Int32__" data-uid="studyAssistant.Data.ApplicationDbContext.GetStudyTimeByCourse(System.Nullable{System.Int32})">GetStudyTimeByCourse(Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the total study time in a particular course</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;double&gt; GetStudyTimeByCourse(int? courseId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">courseId</span></td>
+        <td><p>The id of the course</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+        <td><p>A Task of type double representing the total amount of study hours</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_OnModelCreating_Microsoft_EntityFrameworkCore_ModelBuilder_.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L347">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_OnModelCreating_" data-uid="studyAssistant.Data.ApplicationDbContext.OnModelCreating*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_OnModelCreating_Microsoft_EntityFrameworkCore_ModelBuilder_" data-uid="studyAssistant.Data.ApplicationDbContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">OnModelCreating(ModelBuilder)</h4>
+  <div class="markdown level1 summary"><p>Customization of the models</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnModelCreating(ModelBuilder builder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.EntityFrameworkCore.ModelBuilder</span></td>
+        <td><span class="parametername">builder</span></td>
+        <td><p>The instance of ModelMbuilder used to make the changes</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext&lt;studyAssistant.Core.Domain.User, studyAssistant.Core.Domain.Role, System.Int32, Microsoft.AspNetCore.Identity.IdentityUserClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserRole&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserLogin&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityRoleClaim&lt;System.Int32&gt;, Microsoft.AspNetCore.Identity.IdentityUserToken&lt;System.Int32&gt;&gt;.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext_PopulateCourseData_System_Int32_.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext.PopulateCourseData(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L294">View Source</a>
+  </span>
+  <a id="studyAssistant_Data_ApplicationDbContext_PopulateCourseData_" data-uid="studyAssistant.Data.ApplicationDbContext.PopulateCourseData*"></a>
+  <h4 id="studyAssistant_Data_ApplicationDbContext_PopulateCourseData_System_Int32_" data-uid="studyAssistant.Data.ApplicationDbContext.PopulateCourseData(System.Int32)">PopulateCourseData(Int32)</h4>
+  <div class="markdown level1 summary"><p>For populating a select input with course data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;SelectListItem&gt;&gt; PopulateCourseData(int userId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The id of the user who owns the courses</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.Rendering.SelectListItem</span>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
+  </div>
+  <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure&lt;T&gt;</span>
+  </div>
+  <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies</span>
+  </div>
+  <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.Internal.IDbSetCache</span>
+  </div>
+  <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/tholin1976/studyAssistant/new/master/apiSpec/new?filename=studyAssistant_Data_ApplicationDbContext.md&amp;value=---%0Auid%3A%20studyAssistant.Data.ApplicationDbContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/tholin1976/studyAssistant/blob/master/Data/ApplicationDbContext.cs/#L17" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

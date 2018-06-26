@@ -127,7 +127,7 @@ namespace studyAssistant.Web.Migrations
                     b.ToTable("UserToken");
                 });
 
-            modelBuilder.Entity("StudyAssistant.Web.Core.Domain.Assignment", b =>
+            modelBuilder.Entity("studyAssistant.Core.Domain.Assignment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -158,7 +158,7 @@ namespace studyAssistant.Web.Migrations
                     b.ToTable("Assignment");
                 });
 
-            modelBuilder.Entity("StudyAssistant.Web.Core.Domain.Course", b =>
+            modelBuilder.Entity("studyAssistant.Core.Domain.Course", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -191,7 +191,7 @@ namespace studyAssistant.Web.Migrations
                     b.ToTable("Course");
                 });
 
-            modelBuilder.Entity("StudyAssistant.Web.Core.Domain.StudySession", b =>
+            modelBuilder.Entity("studyAssistant.Core.Domain.StudySession", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -230,7 +230,7 @@ namespace studyAssistant.Web.Migrations
                     b.ToTable("StudySession");
                 });
 
-            modelBuilder.Entity("StudyAssistant.Web.Core.Domain.StudySessionType", b =>
+            modelBuilder.Entity("studyAssistant.Core.Domain.StudySessionType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -246,7 +246,7 @@ namespace studyAssistant.Web.Migrations
                     b.ToTable("StudySessionType");
                 });
 
-            modelBuilder.Entity("StudyAssistant.Web.Core.Domain.User", b =>
+            modelBuilder.Entity("studyAssistant.Core.Domain.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
@@ -305,7 +305,7 @@ namespace studyAssistant.Web.Migrations
                     b.ToTable("User");
                 });
 
-            modelBuilder.Entity("StudyAssistant.Web.Core.Domain.Role", b =>
+            modelBuilder.Entity("studyAssistant.Core.Domain.Role", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityRole<int>");
 
@@ -322,7 +322,7 @@ namespace studyAssistant.Web.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
-                    b.HasOne("StudyAssistant.Web.Core.Domain.Role")
+                    b.HasOne("studyAssistant.Core.Domain.Role")
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -330,7 +330,7 @@ namespace studyAssistant.Web.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<int>", b =>
                 {
-                    b.HasOne("StudyAssistant.Web.Core.Domain.User")
+                    b.HasOne("studyAssistant.Core.Domain.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -338,7 +338,7 @@ namespace studyAssistant.Web.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<int>", b =>
                 {
-                    b.HasOne("StudyAssistant.Web.Core.Domain.User")
+                    b.HasOne("studyAssistant.Core.Domain.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -346,12 +346,12 @@ namespace studyAssistant.Web.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<int>", b =>
                 {
-                    b.HasOne("StudyAssistant.Web.Core.Domain.Role")
+                    b.HasOne("studyAssistant.Core.Domain.Role")
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("StudyAssistant.Web.Core.Domain.User")
+                    b.HasOne("studyAssistant.Core.Domain.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -359,36 +359,36 @@ namespace studyAssistant.Web.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<int>", b =>
                 {
-                    b.HasOne("StudyAssistant.Web.Core.Domain.User")
+                    b.HasOne("studyAssistant.Core.Domain.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("StudyAssistant.Web.Core.Domain.Assignment", b =>
+            modelBuilder.Entity("studyAssistant.Core.Domain.Assignment", b =>
                 {
-                    b.HasOne("StudyAssistant.Web.Core.Domain.Course", "Course")
+                    b.HasOne("studyAssistant.Core.Domain.Course", "Course")
                         .WithMany("Assignments")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("StudyAssistant.Web.Core.Domain.Course", b =>
+            modelBuilder.Entity("studyAssistant.Core.Domain.Course", b =>
                 {
-                    b.HasOne("StudyAssistant.Web.Core.Domain.User", "User")
+                    b.HasOne("studyAssistant.Core.Domain.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("StudyAssistant.Web.Core.Domain.StudySession", b =>
+            modelBuilder.Entity("studyAssistant.Core.Domain.StudySession", b =>
                 {
-                    b.HasOne("StudyAssistant.Web.Core.Domain.Course", "Course")
+                    b.HasOne("studyAssistant.Core.Domain.Course", "Course")
                         .WithMany("StudySessions")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("StudyAssistant.Web.Core.Domain.StudySessionType", "StudySessionType")
+                    b.HasOne("studyAssistant.Core.Domain.StudySessionType", "StudySessionType")
                         .WithMany("StudyActivities")
                         .HasForeignKey("StudySessionTypeId")
                         .OnDelete(DeleteBehavior.Cascade);

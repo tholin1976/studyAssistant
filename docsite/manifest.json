@@ -1,0 +1,960 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Users/Thomas/source/repos/studyAssistant/studyAssistant",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "XGtyGp0e8HfZZg6MzDSI2w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "k8/K7D2uIvuPc3VSXrzceg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Controllers.AccountController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Controllers.AccountController.html",
+          "hash": "Uoy6fIZwAHu/LO+PlbgIDg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Controllers.AssignmentController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Controllers.AssignmentController.html",
+          "hash": "TwXXAII5FjBSmHRsBsn/qQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Controllers.CalendarController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Controllers.CalendarController.html",
+          "hash": "l9Hx+XNW1H7k1tBw7DyXwA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Controllers.CourseController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Controllers.CourseController.html",
+          "hash": "fne/vXm1VDnko2c7m5YJ8w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Controllers.DashboardController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Controllers.DashboardController.html",
+          "hash": "ewmdCvlnhP0/GgcR3Kw+xQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Controllers.ErrorController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Controllers.ErrorController.html",
+          "hash": "QTwd4VjiTm8Fz12qVpZwcA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Controllers.HomeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Controllers.HomeController.html",
+          "hash": "wVjYWqfg5tKyesNdZFkKwQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Controllers.ReportController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Controllers.ReportController.html",
+          "hash": "v4PzvJg2di6ftYkMKApQVA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Controllers.StudySessionController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Controllers.StudySessionController.html",
+          "hash": "nT6gSbw+BgaKaW7UnvMDbg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Controllers.html",
+          "hash": "OgVsPxDCBldC1F8Kk3DjFA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Core.Domain.Assignment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Core.Domain.Assignment.html",
+          "hash": "53tgdyTzvK+mpoek5ag9MA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Core.Domain.Course.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Core.Domain.Course.html",
+          "hash": "1xuCGwg+1xMP/twyHwRNzw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Core.Domain.Grade.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Core.Domain.Grade.html",
+          "hash": "TcwE1ioohLyDb7Y8FO0VHQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Core.Domain.Role.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Core.Domain.Role.html",
+          "hash": "djebKLWh5xKPfAdjaRG4Wg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Core.Domain.StudySession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Core.Domain.StudySession.html",
+          "hash": "iqjUZhptlgmyQxMohdUxGQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Core.Domain.StudySessionType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Core.Domain.StudySessionType.html",
+          "hash": "MJ8P07jpAwnWEDMiAn4EvQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Core.Domain.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Core.Domain.User.html",
+          "hash": "GuicgU+9kVJPigEPdHAlxg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Core.Domain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Core.Domain.html",
+          "hash": "T2kp+wD+BtT+dr2wMtQ0CQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Data.ApplicationDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Data.ApplicationDbContext.html",
+          "hash": "3LvpodENtgOXrTlCe53C6g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Data.html",
+          "hash": "XAKjL/GeW9mDR+bq6THS7Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Migrations.AddedToFromDatesCourse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Migrations.AddedToFromDatesCourse.html",
+          "hash": "NV6969/YNn1LwFfd0jtTOw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Migrations.html",
+          "hash": "OXIzshNE6Bof1dWBDnDgXQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Models.CalendarEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Models.CalendarEvent.html",
+          "hash": "qxFU8OIGEbb0Itj/7C87wQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Models.ChartMaker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Models.ChartMaker.html",
+          "hash": "1Sp98j/pTlwin/11o1azVw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Models.ChartType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Models.ChartType.html",
+          "hash": "TNBCQekUAaXdVZFAxBMLZw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Models.Event.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Models.Event.html",
+          "hash": "PJ9+qGLaTOVuuy15vBB7ew=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Models.MessageType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Models.MessageType.html",
+          "hash": "gQfkPScOVq77asqTC3VbQA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Models.PaginatedList-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Models.PaginatedList-1.html",
+          "hash": "OaI3aM3r7fBpyRquf5uL/g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Models.ProgressionData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Models.ProgressionData.html",
+          "hash": "0E2BbrYDyDMo/lA7stKu3Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Models.StudySessionDuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Models.StudySessionDuration.html",
+          "hash": "GXaAG9elTy1weGZKAIy1gQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Models.SystemMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Models.SystemMessage.html",
+          "hash": "8fuOPc6MUPadI4yC0DjRqg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Models.html",
+          "hash": "D6+vNBlIfAj5DMuzv1D+AQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Program.html",
+          "hash": "f09ZN3qkcca5DQSjK4mw5Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Startup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Startup.html",
+          "hash": "E3Zietz+EqOvySzPp40DWg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.TagHelpers.CalendarTagHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.TagHelpers.CalendarTagHelper.html",
+          "hash": "EkI5z39/F+L0ZdOR3P1E4w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.TagHelpers.DaysOfWeek.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.TagHelpers.DaysOfWeek.html",
+          "hash": "VjJR6/VIQa+QPuyFv4z/PQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.TagHelpers.EnumExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.TagHelpers.EnumExtensions.html",
+          "hash": "MZ709NcoWPn5HDJpKbTHGQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.TagHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.TagHelpers.html",
+          "hash": "jDW3jOyWoQFV4xStikoRfA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Utilities.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Utilities.Extensions.html",
+          "hash": "3gRe32HD9Ztt6e4E2M13+g=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Utilities.html",
+          "hash": "rQ1lso31D5ajarIT2F9l9w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.ViewModels.AccountCreateViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.ViewModels.AccountCreateViewModel.html",
+          "hash": "P3s70bu4WTfYFer9erU0aA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.ViewModels.AccountLoginViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.ViewModels.AccountLoginViewModel.html",
+          "hash": "Do8dPj28inTO4L+CxlQFUw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.ViewModels.CourseInfoEditViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.ViewModels.CourseInfoEditViewModel.html",
+          "hash": "gDI05p6UefHWdTiInZAOjQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.ViewModels.DashboardViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.ViewModels.DashboardViewModel.html",
+          "hash": "6TnkNNgm3KwHolpsb/7L7w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.ViewModels.SelectCourseReportViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.ViewModels.SelectCourseReportViewModel.html",
+          "hash": "BQu6XD+1FUM7tdZoZao6mw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.ViewModels.StudySessionCreateViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.ViewModels.StudySessionCreateViewModel.html",
+          "hash": "JlNosOYZ15P5kLWeoa92GQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.ViewModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.ViewModels.html",
+          "hash": "ftTjr9n/2WO2TtwEq9HNHg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.AddedValidationToModels.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.AddedValidationToModels.html",
+          "hash": "ouIcFXZbapjov3uSyuHqUA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.ChangeStudySessionDateTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.ChangeStudySessionDateTime.html",
+          "hash": "xegWK2X4eTgf+DlvFVrt3w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.ChangeStudySessionDurationToTimeSpan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.ChangeStudySessionDurationToTimeSpan.html",
+          "hash": "jIT+R8ruF5ghmtlZrD5ZAg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.ChangeStudySessionSplitStartDateTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.ChangeStudySessionSplitStartDateTime.html",
+          "hash": "aEX0U9IivhJLnqv0HwusUQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.ChangedDataAnnotations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.ChangedDataAnnotations.html",
+          "hash": "4qmN7YOZeZ+SXcDv7/4Lbg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.ChangedDateFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.ChangedDateFormat.html",
+          "hash": "tBFrduh65tAuRSatWA845w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.ChangedEntityDescriptionFieldTo1500Chars.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.ChangedEntityDescriptionFieldTo1500Chars.html",
+          "hash": "r1NacSxj4BYLhmNzr8E0rg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.ChangedFinishDateToDurationStudySession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.ChangedFinishDateToDurationStudySession.html",
+          "hash": "1e3LyMMQFmMdshCax+CRGw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.ChangedStudyActivity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.ChangedStudyActivity.html",
+          "hash": "IoKN9d/nxRqdNfPPR64YFQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.ChangedStudyActivityToStudySession.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.ChangedStudyActivityToStudySession.html",
+          "hash": "vJbFAN7TL2jigiPQzW+9sg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.ChangedStudySessionAssignmentDeleteBehavior.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.ChangedStudySessionAssignmentDeleteBehavior.html",
+          "hash": "i5lE/y47suaHuwg2bfdSHA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.EntityCourseChangedCreditToDecimal.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.EntityCourseChangedCreditToDecimal.html",
+          "hash": "it/a5Ey1gwBt6730m/RovA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.Initial.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.Initial.html",
+          "hash": "tQy7HOEdK9qFjym91Hw8sQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.RoleClaimNoPluralization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.RoleClaimNoPluralization.html",
+          "hash": "8BukfqTmL0WE1ebfQjr5Sg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.UserClaimNoPluralization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.UserClaimNoPluralization.html",
+          "hash": "Ca0fUikQL+Zl3lIBU6yp2Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.UserLoginNoPluralization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.UserLoginNoPluralization.html",
+          "hash": "w+5rAYBAvYfJoe6zm6F43w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.UserRoleNoPluralization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.UserRoleNoPluralization.html",
+          "hash": "zj7jzZhagw4WPbmGlHwHtw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.UserTokenNoPluralization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.UserTokenNoPluralization.html",
+          "hash": "8CFOZzISdlDkvbf8tEDguQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.help.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.help.html",
+          "hash": "QaqoAZWPxRx8PZO4BopPYg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.Web.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.Web.Migrations.html",
+          "hash": "9ql4vDAiD39uBtUAwowI/Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/studyAssistant.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/studyAssistant.html",
+          "hash": "YOb0HXPo8tBvyjBC8aDwHQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "f57pElP54/LzuZ4z6bk5sw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "89VwPKc/i1gLGO6N8RoyDw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "xVlQaX7Tk85omoiWv3O+Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/docsite-frontpage.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/docsite-frontpage.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "NxCoXIaMuK8h/RXa8QVRmg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "ob7LqWp4kTNLz+9W4omdTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -10,7 +10,7 @@ using studyAssistant.Core.Domain;
 using studyAssistant.Data;
 using System;
 
-namespace studyAssistant.Web.Migrations
+namespace studyAssistant.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20180518050832_AddedToFromDatesCourse")]

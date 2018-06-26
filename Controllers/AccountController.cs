@@ -153,6 +153,7 @@ namespace studyAssistant.Controllers
 				            .GetSystemMessage();
 				}
 			}
+
 			return View(model);
 		}
 

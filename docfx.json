@@ -5,8 +5,8 @@
         {
           "files": [
             "**.csproj"
-          ]
-          
+          ],
+          "src": "."
         }
       ],
       "dest": "api",
@@ -48,7 +48,7 @@
         ]
       }
     ],
-    "dest": "_site",
+    "dest": "docsite",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [

@@ -136,9 +136,6 @@ namespace studyAssistant.Controllers
             }
 
             return RedirectToAction("Index");
-
-
-
         }
 
 		/// <summary>
@@ -241,7 +238,11 @@ namespace studyAssistant.Controllers
             return View(course);
         }
 
-
+		/// <summary>
+		/// Receives a course id from the request body, passes it to the ApplicationDBContext object which retrieves it if it exists and then tries to delete it.
+		/// </summary>
+		/// <param name="id">The id of the course to delete</param>
+		/// <returns>RedirectToAction(Index) with a status message stored in TempData</returns>
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -268,6 +269,11 @@ namespace studyAssistant.Controllers
             return RedirectToAction("Index");
         }
 
+		/// <summary>
+		/// Receives a course id from the request body, passes it to the ApplicationDbContext object, which then retrieves it if it exists. Then the course is passed to the view if it belongs to the current user.
+		/// </summary>
+		/// <param name="id">The id</param>
+		/// <returns>View(course) if successfull, RedirectToAction(Index) if unsuccessfull</returns>
         [HttpGet]
         public async Task<IActionResult> Info(int id)
         {
@@ -279,6 +285,17 @@ namespace studyAssistant.Controllers
                 TempData["Message"] = new SystemMessage(MessageType.Warning, "Fant ikke faget.").GetSystemMessage();
                 return RedirectToAction("Index");
             }
+
+	        var currentUser = await _userManager.GetUserAsync(HttpContext.User);
+
+	        if (course.UserId != currentUser.Id)
+	        {
+		        TempData["Message"] =
+			        new SystemMessage(MessageType.Warning, "Faget du ønsker å endre, tilhører en annen bruker.")
+				        .GetSystemMessage();
+		        return RedirectToAction("Index");
+	        }
+
 
             ViewBag.CourseStudyTime = await _context.GetStudyTimeByCourse(id);
 

@@ -13,15 +13,15 @@ h6 {
 }
 
 header.masthead {
-    background: url("../img/bg-masthead.png") no-repeat center center;
+    background: url("../img/bg-masthead.jpg") no-repeat center center;
 }
 
 header.masthead-createaccount {
-    background: url("../img/bg-book-bindings-business-coffee.png") no-repeat center center;    
+    background: url("../img/bg-book-bindings-business-coffee.jpg") no-repeat center center;    
 }
 
 header.masthead-login {
-    background: url("../img/bg-alphabet-blur-books.png") no-repeat center center;
+    background: url("../img/bg-alphabet-blur-books.jpg") no-repeat center center;
 }
 header.masthead, header.masthead-login, header.masthead-createaccount {
   position: relative;
