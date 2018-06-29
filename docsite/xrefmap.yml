@@ -2825,51 +2825,6 @@ references:
   isSpec: "True"
   fullName: studyAssistant.Web.Migrations.ChangedDataAnnotations.Up
   nameWithType: ChangedDataAnnotations.Up
-- uid: studyAssistant.Web.Migrations.ChangedDateFormat
-  name: ChangedDateFormat
-  href: api/studyAssistant.Web.Migrations.ChangedDateFormat.html
-  commentId: T:studyAssistant.Web.Migrations.ChangedDateFormat
-  fullName: studyAssistant.Web.Migrations.ChangedDateFormat
-  nameWithType: ChangedDateFormat
-- uid: studyAssistant.Web.Migrations.ChangedDateFormat.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
-  name: BuildTargetModel(ModelBuilder)
-  href: api/studyAssistant.Web.Migrations.ChangedDateFormat.html#studyAssistant_Web_Migrations_ChangedDateFormat_BuildTargetModel_Microsoft_EntityFrameworkCore_ModelBuilder_
-  commentId: M:studyAssistant.Web.Migrations.ChangedDateFormat.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
-  fullName: studyAssistant.Web.Migrations.ChangedDateFormat.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
-  nameWithType: ChangedDateFormat.BuildTargetModel(ModelBuilder)
-- uid: studyAssistant.Web.Migrations.ChangedDateFormat.BuildTargetModel*
-  name: BuildTargetModel
-  href: api/studyAssistant.Web.Migrations.ChangedDateFormat.html#studyAssistant_Web_Migrations_ChangedDateFormat_BuildTargetModel_
-  commentId: Overload:studyAssistant.Web.Migrations.ChangedDateFormat.BuildTargetModel
-  isSpec: "True"
-  fullName: studyAssistant.Web.Migrations.ChangedDateFormat.BuildTargetModel
-  nameWithType: ChangedDateFormat.BuildTargetModel
-- uid: studyAssistant.Web.Migrations.ChangedDateFormat.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  name: Down(MigrationBuilder)
-  href: api/studyAssistant.Web.Migrations.ChangedDateFormat.html#studyAssistant_Web_Migrations_ChangedDateFormat_Down_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
-  commentId: M:studyAssistant.Web.Migrations.ChangedDateFormat.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  fullName: studyAssistant.Web.Migrations.ChangedDateFormat.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  nameWithType: ChangedDateFormat.Down(MigrationBuilder)
-- uid: studyAssistant.Web.Migrations.ChangedDateFormat.Down*
-  name: Down
-  href: api/studyAssistant.Web.Migrations.ChangedDateFormat.html#studyAssistant_Web_Migrations_ChangedDateFormat_Down_
-  commentId: Overload:studyAssistant.Web.Migrations.ChangedDateFormat.Down
-  isSpec: "True"
-  fullName: studyAssistant.Web.Migrations.ChangedDateFormat.Down
-  nameWithType: ChangedDateFormat.Down
-- uid: studyAssistant.Web.Migrations.ChangedDateFormat.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  name: Up(MigrationBuilder)
-  href: api/studyAssistant.Web.Migrations.ChangedDateFormat.html#studyAssistant_Web_Migrations_ChangedDateFormat_Up_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
-  commentId: M:studyAssistant.Web.Migrations.ChangedDateFormat.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  fullName: studyAssistant.Web.Migrations.ChangedDateFormat.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  nameWithType: ChangedDateFormat.Up(MigrationBuilder)
-- uid: studyAssistant.Web.Migrations.ChangedDateFormat.Up*
-  name: Up
-  href: api/studyAssistant.Web.Migrations.ChangedDateFormat.html#studyAssistant_Web_Migrations_ChangedDateFormat_Up_
-  commentId: Overload:studyAssistant.Web.Migrations.ChangedDateFormat.Up
-  isSpec: "True"
-  fullName: studyAssistant.Web.Migrations.ChangedDateFormat.Up
-  nameWithType: ChangedDateFormat.Up
 - uid: studyAssistant.Web.Migrations.ChangedEntityDescriptionFieldTo1500Chars
   name: ChangedEntityDescriptionFieldTo1500Chars
   href: api/studyAssistant.Web.Migrations.ChangedEntityDescriptionFieldTo1500Chars.html
@@ -3275,51 +3230,6 @@ references:
   isSpec: "True"
   fullName: studyAssistant.Web.Migrations.EntityCourseChangedCreditToDecimal.Up
   nameWithType: EntityCourseChangedCreditToDecimal.Up
-- uid: studyAssistant.Web.Migrations.help
-  name: help
-  href: api/studyAssistant.Web.Migrations.help.html
-  commentId: T:studyAssistant.Web.Migrations.help
-  fullName: studyAssistant.Web.Migrations.help
-  nameWithType: help
-- uid: studyAssistant.Web.Migrations.help.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
-  name: BuildTargetModel(ModelBuilder)
-  href: api/studyAssistant.Web.Migrations.help.html#studyAssistant_Web_Migrations_help_BuildTargetModel_Microsoft_EntityFrameworkCore_ModelBuilder_
-  commentId: M:studyAssistant.Web.Migrations.help.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
-  fullName: studyAssistant.Web.Migrations.help.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
-  nameWithType: help.BuildTargetModel(ModelBuilder)
-- uid: studyAssistant.Web.Migrations.help.BuildTargetModel*
-  name: BuildTargetModel
-  href: api/studyAssistant.Web.Migrations.help.html#studyAssistant_Web_Migrations_help_BuildTargetModel_
-  commentId: Overload:studyAssistant.Web.Migrations.help.BuildTargetModel
-  isSpec: "True"
-  fullName: studyAssistant.Web.Migrations.help.BuildTargetModel
-  nameWithType: help.BuildTargetModel
-- uid: studyAssistant.Web.Migrations.help.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  name: Down(MigrationBuilder)
-  href: api/studyAssistant.Web.Migrations.help.html#studyAssistant_Web_Migrations_help_Down_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
-  commentId: M:studyAssistant.Web.Migrations.help.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  fullName: studyAssistant.Web.Migrations.help.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  nameWithType: help.Down(MigrationBuilder)
-- uid: studyAssistant.Web.Migrations.help.Down*
-  name: Down
-  href: api/studyAssistant.Web.Migrations.help.html#studyAssistant_Web_Migrations_help_Down_
-  commentId: Overload:studyAssistant.Web.Migrations.help.Down
-  isSpec: "True"
-  fullName: studyAssistant.Web.Migrations.help.Down
-  nameWithType: help.Down
-- uid: studyAssistant.Web.Migrations.help.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  name: Up(MigrationBuilder)
-  href: api/studyAssistant.Web.Migrations.help.html#studyAssistant_Web_Migrations_help_Up_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
-  commentId: M:studyAssistant.Web.Migrations.help.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  fullName: studyAssistant.Web.Migrations.help.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
-  nameWithType: help.Up(MigrationBuilder)
-- uid: studyAssistant.Web.Migrations.help.Up*
-  name: Up
-  href: api/studyAssistant.Web.Migrations.help.html#studyAssistant_Web_Migrations_help_Up_
-  commentId: Overload:studyAssistant.Web.Migrations.help.Up
-  isSpec: "True"
-  fullName: studyAssistant.Web.Migrations.help.Up
-  nameWithType: help.Up
 - uid: studyAssistant.Web.Migrations.Initial
   name: Initial
   href: api/studyAssistant.Web.Migrations.Initial.html

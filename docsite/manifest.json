@@ -653,18 +653,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/studyAssistant.Web.Migrations.ChangedDateFormat.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/studyAssistant.Web.Migrations.ChangedDateFormat.html",
-          "hash": "tBFrduh65tAuRSatWA845w=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/studyAssistant.Web.Migrations.ChangedEntityDescriptionFieldTo1500Chars.yml",
       "output": {
         ".html": {
@@ -809,23 +797,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/studyAssistant.Web.Migrations.help.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/studyAssistant.Web.Migrations.help.html",
-          "hash": "QaqoAZWPxRx8PZO4BopPYg=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/studyAssistant.Web.Migrations.yml",
       "output": {
         ".html": {
           "relative_path": "api/studyAssistant.Web.Migrations.html",
-          "hash": "9ql4vDAiD39uBtUAwowI/Q=="
+          "hash": "3Xw21Swo7LZcqau/RlJs7A=="
         }
       },
       "is_incremental": true,
@@ -849,7 +825,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "f57pElP54/LzuZ4z6bk5sw=="
+          "hash": "YnwpsEa25SvtCOwZjwO9gw=="
         }
       },
       "is_incremental": false,
